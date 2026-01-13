@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "process": "Process",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "RESULTS-DRIVEN WEBSITES FOR YOUR BUSINESS",
+    "cta1": "Order a Website",
+    "cta2": "Via Telegram Bot"
+  },
+  "pricing": {
+    "title": "Our Pricing Plans",
+    "cta": "Order a Website",
+    "plans": [
+      {
+        "name": "Minimal",
+        "price": "$100+",
+        "features": [
+          "1-page website",
+          "Order button",
+          "Domain + hosting",
+          "Mobile responsive design"
+        ]
+      },
+      {
+        "name": "Standard",
+        "price": "$300+",
+        "features": [
+          "3-5 pages",
+          "Order form",
+          "Domain + hosting",
+          "Mobile adaptation",
+          "SEO (Google)",
+          "Admin panel"
+        ]
+      },
+      {
+        "name": "Business",
+        "price": "$600+",
+        "features": [
+          "5-7 pages",
+          "Service sections",
+          "Order form",
+          "Domain + hosting",
+          "SEO (Google)",
+          "Admin panel",
+          "Analytics",
+          "Custom design"
+        ]
+      },
+      {
+        "name": "Individual",
+        "price": "$1200+",
+        "features": [
+          "7+ pages",
+          "Custom approach",
+          "Scalable structure",
+          "Contact form",
+          "Domain + hosting",
+          "SEO (Google)",
+          "Custom design",
+          "Admin panel",
+          "Analytics"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "title": "How We Implement Your Project",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Consultation",
+        "description": "We study your needs and offer the best solutions."
+      },
+      {
+        "number": "02",
+        "title": "Planning",
+        "description": "We develop the project structure and design prototype."
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "We create your website using modern technologies."
+      },
+      {
+        "number": "04",
+        "title": "Testing & Launch",
+        "description": "We test the site and launch it on the internet."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Answers to Your Questions",
+    "items": [
+      {
+        "question": "How long does website development take?",
+        "answer": "The time depends on the chosen plan and project scope. On average, a project is completed in 5-30 days."
+      },
+      {
+        "question": "What does the website cost depend on?",
+        "answer": "The cost depends on the chosen plan, number of pages, and amount of information."
+      },
+      {
+        "question": "Do I need to buy domain and hosting myself?",
+        "answer": "No. Domain and hosting are provided by us and fully configured."
+      },
+      {
+        "question": "How does the process work after ordering?",
+        "answer": "First, we develop the project structure and agree with you, then the work begins."
+      },
+      {
+        "question": "Will there be technical support after launch?",
+        "answer": "Yes. After launch, we provide free technical support for 1 to 3 months."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Leave your number, we'll call you back!",
+    "form": {
+      "name": "Name",
+      "phone": "Phone number",
+      "username": "Telegram username",
+      "message": "Message",
+      "submit": "Send",
+      "submitting": "Sending..."
+    },
+    "success": "✅ Your message was sent successfully!",
+    "error": "❌ An error occurred. Please try again."
+  },
+  "footer": {
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "bot": "Telegram bot",
+    "address": "Tashkent city, Olmazor district",
+    "copyright": "© 2026 AyTi Xizmati. All rights reserved."
+  },
+  "seo": {
+    "title": "AyTi Xizmati - Result-Oriented Website and Telegram Bot Creation",
+    "description": "Professional websites, Telegram bots, and IT solutions. Affordable prices and high quality. Website creation services in Tashkent.",
+    "keywords": "website creation, web development services, website cost, IT services, professional website, programming services, web design, business website, company website, online services creation, telegram bot creation services"
+  }
+}

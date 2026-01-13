@@ -1,8 +1,40 @@
 .faq {
   padding: 100px 0;
-  background: #0f172a;
+  background: linear-gradient(135deg, #050A14 0%, #0A0F1A 100%);
   position: relative;
   color: #fff;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.faq::before {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.08) 40%, transparent 70%);
+  border-radius: 50%;
+  top: 80px;
+  left: -200px;
+  animation: bounce-random1 12s infinite linear;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.25);
+}
+
+.faq::after {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.07) 40%, transparent 70%);
+  border-radius: 50%;
+  bottom: 150px;
+  right: -150px;
+  animation: bounce-random2 14s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
 }
 
 .faq .section-title {
@@ -61,7 +93,7 @@
 }
 
 .faq-answer.active {
-  max-height: 200px; /* Approximate max height */
+  max-height: 200px;
   transition: max-height 0.5s ease-in-out;
 }
 
@@ -71,9 +103,61 @@
   line-height: 1.6;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .faq-question {
     font-size: 1rem;
+  }
+
+  .faq::before,
+  .faq::after {
+    display: none !important;
+  }
+}
+
+@keyframes bounce-random1 {
+  0% {
+    transform: translateX(-200px) translateY(-30px);
+  }
+  15% {
+    transform: translateX(200px) translateY(20px);
+  }
+  30% {
+    transform: translateX(500px) translateY(-25px);
+  }
+  45% {
+    transform: translateX(800px) translateY(15px);
+  }
+  60% {
+    transform: translateX(1100px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(1300px) translateY(25px);
+  }
+  90% {
+    transform: translateX(1500px) translateY(-15px);
+  }
+  100% {
+    transform: translateX(1700px) translateY(0);
+  }
+}
+
+@keyframes bounce-random2 {
+  0% {
+    transform: translateX(100vw) translateY(100px);
+  }
+  20% {
+    transform: translateX(700px) translateY(-150px);
+  }
+  40% {
+    transform: translateX(400px) translateY(200px);
+  }
+  60% {
+    transform: translateX(100px) translateY(-100px);
+  }
+  80% {
+    transform: translateX(-200px) translateY(150px);
+  }
+  100% {
+    transform: translateX(-600px) translateY(0);
   }
 }

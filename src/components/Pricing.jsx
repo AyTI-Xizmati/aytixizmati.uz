@@ -1,80 +1,25 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Pricing.css';
 
 const Pricing = () => {
-  const plans = [
-    {
-      id: 1,
-      title: 'Minimal',
-      price: '$100+',
-      features: [
-        '1 sahifali sayt',
-        'Buyurtma tugmasi',
-        'Domen + hosting',
-        'Mobilga mos dizayn'
-      ]
-    },
-    {
-      id: 2,
-      title: 'Standart',
-      price: '$300+',
-      features: [
-        '3-5 sahifa',
-        'Buyurtma formasi',
-        'Domen + hosting',
-        'Mobil qurilmalarga mos',
-        'SEO (Google)',
-        'Admin panel'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Biznes',
-      price: '$600+',
-      features: [
-        '5-7 sahifa',
-        'Xizmatlar bo\'limlari',
-        'Buyurtma formasi',
-        'Domen + hosting',
-        'SEO (Google)',
-        'Admin panel',
-        'Analitika',
-        'Individual dizayn'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Individual',
-      price: '$1200+',
-      features: [
-        '7+ sahifa',
-        'Individual yondashuv',
-        'Kengaytiriladigan struktura',
-        'Murojaat formasi',
-        'Domen + hosting',
-        'SEO (Google)',
-        'Individual dizayn',
-        'Admin panel',
-        'Analitika'
-      ]
-    }
-  ];
+  const { t } = useTranslation();
+  
+  // JSON fayllarda 'pricing.plans' endi array([]) ekanligiga ishonch hosil qiling
+  const plans = t('pricing.plans', { returnObjects: true }) || [];
 
   return (
     <section className="pricing" id="narxlar">
       <div className="container">
-        <h2 className="section-title">Xizmat tariflarimiz</h2>
-        <p className="section-subtitle">
-          Sizga mos keladigan tarifni tanlang
-        </p>
+        <h2 className="section-title">{t('pricing.title')}</h2>
 
         <div className="pricing-grid">
-          {plans.map((plan) => (
-            <div className="pricing-card" key={plan.id}>
-              <h3>{plan.title}</h3>
+          {Array.isArray(plans) && plans.map((plan, index) => (
+            <div className="pricing-card" key={index}>
+              <h3>{plan.name}</h3>
               <ul className="pricing-features">
-                {plan.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+                {plan.features && plan.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
                 ))}
               </ul>
               <div className="price-tag">{plan.price}</div>
@@ -84,7 +29,7 @@ const Pricing = () => {
 
         <div className="pricing-cta-container">
           <a href="#aloqa" className="btn btn-pricing-main">
-            Sayt buyurtma qilish
+            {t('pricing.cta')}
           </a>
         </div>
       </div>
