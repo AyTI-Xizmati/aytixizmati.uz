@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aytixizmati.uz/sitemap.xml
