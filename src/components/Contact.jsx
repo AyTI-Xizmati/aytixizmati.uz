@@ -160,7 +160,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="2"
+                  rows="1"
                   required
                 />
               </div>

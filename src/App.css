@@ -21,7 +21,7 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text-main);
-  background-color: var(--bg-white);
+  background-color: transparent; /* Changed from var(--primary) to avoid covering fixed background */
 }
 
 .App {

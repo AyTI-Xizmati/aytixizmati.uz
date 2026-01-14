@@ -52,6 +52,7 @@ const Main = () => {
 
   return (
     <section className="main-section" id="asosiy">
+      
       <nav className={`navbar ${isHeaderHidden ? 'navbar-hidden' : ''}`}>
         <div className="nav-container">
           <div className="logo-container">

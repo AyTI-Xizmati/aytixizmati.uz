@@ -7,7 +7,7 @@
   /* Tepadan bo'sh joyni 85px dan 60px ga tushirdik */
   padding: 40px 20px 40px; 
   position: relative;
-  background-color: #0F172A; 
+  /* background-color: #0F172A; removed */
   z-index: 10;
   box-sizing: border-box;
 }
