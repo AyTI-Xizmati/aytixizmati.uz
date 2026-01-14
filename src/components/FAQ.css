@@ -84,25 +84,3 @@
   }
 }
 
-@keyframes bounce-random1 {
-  0% {
-    transform: translateX(-200px) translateY(-30px);
-  }
-  15% {
-    transform: translateX(200px) translateY(20px);
-  }
-  30% {
-    transform: translateX(500px) translateY(-25px);
-  }
-  45% {
-    transform: translateX(800px) translateY(15px);
-  }
-  60% {
-    transform: translateX(1100px) translateY(-20px);
-  }
-  75% {
-    transform: translateX(1300px) translateY(25px);
-  }
-  90% {
-    transform: translateX(1500px) translateY(-15px);
-  }
