@@ -1,9 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams } from 'react-router-dom';
 import './LanguageSwitcher.css';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { lang } = useParams();
 
   const languages = [
     { code: 'uz', name: 'O\'z', flag: '🇺🇿' },
@@ -14,6 +17,8 @@ const LanguageSwitcher = () => {
   const handleLanguageChange = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem('language', lng);
+    // Navigate to the new language route
+    navigate(`/${lng}`);
   };
 
   return (
