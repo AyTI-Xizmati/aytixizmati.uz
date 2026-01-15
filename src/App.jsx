@@ -15,6 +15,16 @@ function Home() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    // Handle GitHub Pages 404 redirect
+    if (sessionStorage.redirect) {
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      const newPath = redirect.startsWith('/') ? redirect : '/' + redirect;
+      window.history.replaceState(null, null, newPath);
+    }
+  }, []);
+
+  useEffect(() => {
     const validLangs = ['uz', 'ru', 'en'];
     const currentLang = lang && validLangs.includes(lang) ? lang : 'uz';
     
