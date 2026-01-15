@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, useParams, Navigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Main from './components/Main';
 import Pricing from './components/Pricing';
 import Process from './components/Process';
@@ -8,7 +10,20 @@ import SEO from './components/SEO';
 import PixelSnow from './components/PixelSnow';
 import './App.css';
 
-function App() {
+function Home() {
+  const { lang } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const validLangs = ['uz', 'ru', 'en'];
+    const currentLang = lang && validLangs.includes(lang) ? lang : 'uz';
+    
+    if (i18n.language !== currentLang) {
+      i18n.changeLanguage(currentLang);
+      localStorage.setItem('language', currentLang);
+    }
+  }, [lang, i18n]);
+
   return (
     <>
       <PixelSnow 
@@ -31,6 +46,15 @@ function App() {
       <FAQ />
       <Contact />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/:lang?" element={<Home />} />
+      <Route path="*" element={<Navigate to="/uz" replace />} />
+    </Routes>
   );
 }
 
