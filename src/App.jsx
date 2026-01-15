@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useParams, Navigate } from 'react-router-dom';
+import { Routes, Route, useParams, Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Main from './components/Main';
 import Pricing from './components/Pricing';
@@ -11,8 +11,9 @@ import PixelSnow from './components/PixelSnow';
 import './App.css';
 
 function Home() {
-  const { lang } = useParams();
+  const { lang, section } = useParams();
   const { i18n } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     // Handle GitHub Pages 404 redirect - restore the original path
@@ -20,16 +21,18 @@ function Home() {
       const redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
       
-      // Extract language from the redirect path
-      const pathMatch = redirect.match(/^\/(en|ru|uz)/);
+      // Extract language and section from the redirect path
+      const pathMatch = redirect.match(/^\/(en|ru|uz)(?:\/(.+))?/);
       const pathLang = pathMatch ? pathMatch[1] : lang;
+      const pathSection = pathMatch ? pathMatch[2] : section;
       
       // Update window history to show correct path
       if (pathLang && pathLang !== 'uz') {
-        window.history.replaceState(null, null, `/${pathLang}`);
+        const newPath = pathSection ? `/${pathLang}/${pathSection}` : `/${pathLang}`;
+        window.history.replaceState(null, null, newPath);
       }
     }
-  }, [lang]);
+  }, [lang, section]);
 
   useEffect(() => {
     const validLangs = ['uz', 'ru', 'en'];
@@ -38,7 +41,17 @@ function Home() {
     // Always update i18n language when lang param changes
     i18n.changeLanguage(currentLang);
     localStorage.setItem('language', currentLang);
-  }, [lang, i18n]);
+    
+    // Scroll to section if specified
+    if (section) {
+      setTimeout(() => {
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [lang, section, i18n]);
 
   return (
     <>
@@ -68,8 +81,16 @@ function Home() {
 function App() {
   return (
     <Routes>
-      <Route path="/:lang?" element={<Home />} />
-      <Route path="*" element={<Navigate to="/uz" replace />} />
+      {/* Language + Section routes */}
+      <Route path="/:lang/:section" element={<Home />} />
+      {/* Language only routes */}
+      <Route path="/:lang" element={<Home />} />
+      {/* Direct section routes (no language prefix) */}
+      <Route path="/:section" element={<Home />} />
+      {/* Root */}
+      <Route path="/" element={<Home />} />
+      {/* Catch all - redirect to root */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
