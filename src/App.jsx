@@ -15,14 +15,21 @@ function Home() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Handle GitHub Pages 404 redirect
+    // Handle GitHub Pages 404 redirect - restore the original path
     if (sessionStorage.redirect) {
       const redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
-      const newPath = redirect.startsWith('/') ? redirect : '/' + redirect;
-      window.history.replaceState(null, null, newPath);
+      
+      // Extract language from the redirect path
+      const pathMatch = redirect.match(/^\/(en|ru|uz)/);
+      const pathLang = pathMatch ? pathMatch[1] : lang;
+      
+      // Update window history to show correct path
+      if (pathLang && pathLang !== 'uz') {
+        window.history.replaceState(null, null, `/${pathLang}`);
+      }
     }
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     const validLangs = ['uz', 'ru', 'en'];
