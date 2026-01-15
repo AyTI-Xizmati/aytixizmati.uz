@@ -28,10 +28,9 @@ function Home() {
     const validLangs = ['uz', 'ru', 'en'];
     const currentLang = lang && validLangs.includes(lang) ? lang : 'uz';
     
-    if (i18n.language !== currentLang) {
-      i18n.changeLanguage(currentLang);
-      localStorage.setItem('language', currentLang);
-    }
+    // Always update i18n language when lang param changes
+    i18n.changeLanguage(currentLang);
+    localStorage.setItem('language', currentLang);
   }, [lang, i18n]);
 
   return (
