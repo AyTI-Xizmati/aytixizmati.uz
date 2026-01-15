@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA routing fix
+    (function() {
+      const path = window.location.pathname;
+      
+      // Extract the route path
+      const redirectTo = path.split('/').filter(Boolean).join('/') || '/';
+      
+      // Store the path and redirect to index.html
+      sessionStorage.redirect = redirectTo;
+      window.location.href = '/index.html';
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
