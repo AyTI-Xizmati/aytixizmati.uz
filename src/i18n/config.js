@@ -10,11 +10,21 @@ const resources = {
   en: { translation: en }
 };
 
+// Get initial language from URL or localStorage
+const getInitialLanguage = () => {
+  const path = window.location.pathname;
+  const match = path.match(/^\/(en|ru|uz)/);
+  if (match && ['en', 'ru', 'uz'].includes(match[1])) {
+    return match[1];
+  }
+  return localStorage.getItem('language') || 'uz';
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: localStorage.getItem('language') || 'uz',
+    lng: getInitialLanguage(),
     fallbackLng: 'uz',
     interpolation: {
       escapeValue: false
