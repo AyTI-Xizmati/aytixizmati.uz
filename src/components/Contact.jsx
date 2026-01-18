@@ -19,7 +19,7 @@ const Contact = () => {
   });
 
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyMPF4ivmpWtHSako7ZCrOfGFMXDVSylEz6yg0FGlCjDs6TdcdhkvuteAMDaucy-k0/exec";
+    "https://script.google.com/macros/s/AKfycbyY4-suZ8m7wu24Lj02Th51ACWr56xCaykOIS_OezigkApGwpZ1CNPC5fllZCStiR3Usw/exec";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
