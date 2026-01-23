@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
+import { FaGlobe, FaPhone } from 'react-icons/fa';
 import './Main.css';
 
 const Main = () => {
@@ -62,17 +62,21 @@ const Main = () => {
             <h1 className="logo">AyTi Xizmati</h1>
             <a href="tel:+998773009928" className="phone-link">
               +998 77-300-99-28
+              <FaPhone className="phone-icon" />
             </a>
-            
+
             <div className="lang-selector-wrapper">
-              <button 
+              <button
                 className="lang-toggle-btn"
                 onClick={() => setShowLangDropdown(!showLangDropdown)}
+                aria-label={t('nav.languageSelector')}
+                aria-expanded={showLangDropdown}
+                aria-haspopup="true"
               >
                 <FaGlobe className="lang-icon" />
                 <span className="lang-text">{i18n.language.toUpperCase()}</span>
               </button>
-              
+
               {showLangDropdown && (
                 <div className="lang-dropdown-menu">
                   {languages.map(lang => (
@@ -89,11 +93,18 @@ const Main = () => {
               )}
             </div>
           </div>
-          
+
           <div className="header-right">
-            <div className="menu-icon" onClick={toggleMenu}>
-              {isMenuOpen ? <FaTimes /> : <FaBars />}
-            </div>
+            <button
+              className={`menu-icon ${isMenuOpen ? 'open' : ''}`}
+              onClick={toggleMenu}
+              aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+              aria-expanded={isMenuOpen}
+            >
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+            </button>
           </div>
 
           <ul className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
@@ -102,6 +113,12 @@ const Main = () => {
             <li><a href="#jarayon" onClick={closeMenu}>{t('nav.process')}</a></li>
             <li><a href="#faq" onClick={closeMenu}>{t('nav.faq')}</a></li>
             <li><a href="#aloqa" onClick={closeMenu}>{t('nav.contact')}</a></li>
+            <li className="mobile-phone-item">
+              <a href="tel:+998773009928" className="mobile-phone-link" onClick={closeMenu}>
+                +998 77-300-99-28
+                <FaPhone className="phone-icon" />
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -112,7 +129,7 @@ const Main = () => {
         </h1>
         <div className="main-buttons">
           <a href="#aloqa" className="btn btn-primary">{t('hero.cta1')}</a>
-          <a href="https://t.me/ayti_xizmatibot" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+          <a href="#narxlar" className="btn btn-secondary">
             {t('hero.cta2')}
           </a>
         </div>

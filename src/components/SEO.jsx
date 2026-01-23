@@ -44,7 +44,10 @@ const SEO = () => {
             <meta property="og:title" content={t('seo.title')} />
             <meta property="og:description" content={t('seo.description')} />
             <meta property="og:url" content={currentUrl} />
-            <meta property="og:image" content="https://aytixizmati.uz/og-image.png" />
+            <meta property="og:image" content="https://aytixizmati.uz/og-image.svg" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:type" content="image/svg+xml" />
             <meta property="og:site_name" content="AyTi Xizmati" />
             <meta property="og:locale" content={currentLang === 'uz' ? 'uz_UZ' : currentLang === 'ru' ? 'ru_RU' : 'en_US'} />
             <meta property="og:locale:alternate" content="uz_UZ" />
@@ -55,7 +58,7 @@ const SEO = () => {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={t('seo.title')} />
             <meta name="twitter:description" content={t('seo.description')} />
-            <meta name="twitter:image" content="https://aytixizmati.uz/og-image.png" />
+            <meta name="twitter:image" content="https://aytixizmati.uz/og-image.svg" />
             
             {/* Canonical Link */}
             <link rel="canonical" href={currentUrl} />

@@ -74,6 +74,20 @@
   box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
 }
 
+/* Autofill rangini default rangida saqlash */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(15, 23, 42, 0.6) inset;
+  box-shadow: 0 0 0px 1000px rgba(15, 23, 42, 0.6) inset;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
@@ -115,7 +129,7 @@
   padding: 16px 24px;
   border-radius: 12px;
   color: white;
-  z-index: 1000;
+  z-index: 10000;
   animation: slideIn 0.3s ease;
   font-weight: 500;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);

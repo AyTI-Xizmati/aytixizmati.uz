@@ -4,12 +4,15 @@
     "services": "Xizmatlar",
     "process": "Jarayon",
     "faq": "FAQ",
-    "contact": "Aloqa"
+    "contact": "Aloqa",
+    "languageSelector": "Til tanlash",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish"
   },
   "hero": {
     "title": "NATIJAGA yo'naltirilgan SAYTLAR ishlab chiqamiz",
     "cta1": "Buyurtma berish",
-    "cta2": "Telegram bot orqali"
+    "cta2": "Narxlar bilan tanishish"
   },
   "pricing": {
     "title": "Xizmat tariflarimiz",
@@ -106,7 +109,7 @@
       },
       {
         "question": "Domen va hostingni o'zim olishim kerakmi?",
-        "answer": "Yo'q. Domen va hosting biz tomonimizdan taqdim etiladi va loyiha doirasida to'liq sozlab beriladi."
+        "answer": "Yo'q, 1 yillik domain va 1 oylik hosting biz tomonimizdan taqdim etiladi."
       },
       {
         "question": "Buyurtma berilgandan keyin jarayon qanday bo'ladi?",

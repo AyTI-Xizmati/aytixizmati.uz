@@ -61,10 +61,7 @@
 }
 
 .pricing-card:hover {
-  transform: translateY(-8px);
   border-color: #38BDF8;
-  background: rgba(30, 41, 59, 0.7);
-  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
 }
 
 .pricing-card h3 {

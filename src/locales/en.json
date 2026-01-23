@@ -4,12 +4,15 @@
     "services": "Services",
     "process": "Process",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "languageSelector": "Select language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "title": "RESULTS-DRIVEN WEBSITES FOR YOUR BUSINESS",
     "cta1": "Order a Website",
-    "cta2": "Via Telegram Bot"
+    "cta2": "View Pricing"
   },
   "pricing": {
     "title": "Our Pricing Plans",
@@ -106,7 +109,7 @@
       },
       {
         "question": "Do I need to buy domain and hosting myself?",
-        "answer": "No. Domain and hosting are provided by us and fully configured."
+        "answer": "No, 1 year domain and 1 month hosting are provided by us."
       },
       {
         "question": "How does the process work after ordering?",

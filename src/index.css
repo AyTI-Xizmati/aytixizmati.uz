@@ -15,4 +15,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+
+  /* Grid pattern background */
+  --grid-color: rgba(56, 189, 248, 0.08);
+  background-color: #0a0f1a;
+  background-image:
+    linear-gradient(0deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent);
+  background-size: 60px 60px;
+  background-attachment: fixed;
 }

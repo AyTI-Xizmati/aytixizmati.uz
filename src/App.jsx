@@ -55,8 +55,8 @@ function Home() {
 
   return (
     <>
-      <PixelSnow 
-        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, backgroundColor: '#0F172A' }}
+      <PixelSnow
+        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
         flakeSize={0.005}
         pixelResolution={500}
         speed={2.7}
