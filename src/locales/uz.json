@@ -12,7 +12,7 @@
   "hero": {
     "title": "NATIJAGA yo'naltirilgan SAYTLAR ishlab chiqamiz",
     "cta1": "Buyurtma berish",
-    "cta2": "Narxlar bilan tanishish"
+    "cta2": "Xizmatlar bilan tanishish"
   },
   "pricing": {
     "title": "Xizmat tariflarimiz",
@@ -122,12 +122,13 @@
     ]
   },
   "contact": {
-    "title": "Raqamingizni qoldiring, biz tezda aloqaga chiqamiz!",
+    "title": "Bepul konsultatsiya uchun raqamingizni qoldiring",
     "form": {
       "name": "Ismingiz",
       "phone": "Telefon raqam",
       "username": "Telegram username",
       "message": "Xabar",
+      "messagePlaceholder": "Masalan: Biznes uchun sayt kerak",
       "submit": "Yuborish",
       "submitting": "Yuborilmoqda..."
     },

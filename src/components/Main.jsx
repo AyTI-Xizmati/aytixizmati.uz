@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { FaGlobe, FaPhone } from 'react-icons/fa';
@@ -8,8 +8,6 @@ const Main = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
 
   const languages = [
@@ -33,30 +31,10 @@ const Main = () => {
     setShowLangDropdown(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Agar pastga siljiga bo'lsa headerisini yashir
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setIsHeaderHidden(true);
-      } 
-      // Agar tepaga siljiga bo'lsa headerisini ko'rsat
-      else if (currentScrollY < lastScrollY) {
-        setIsHeaderHidden(false);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
-
   return (
     <section className="main-section" id="asosiy">
-      
-      <nav className={`navbar ${isHeaderHidden ? 'navbar-hidden' : ''}`}>
+
+      <nav className="navbar">
         <div className="nav-container">
           <div className="logo-container">
             <h1 className="logo">AyTi Xizmati</h1>

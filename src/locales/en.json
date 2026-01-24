@@ -12,7 +12,7 @@
   "hero": {
     "title": "RESULTS-DRIVEN WEBSITES FOR YOUR BUSINESS",
     "cta1": "Order a Website",
-    "cta2": "View Pricing"
+    "cta2": "View Services"
   },
   "pricing": {
     "title": "Our Pricing Plans",
@@ -122,12 +122,13 @@
     ]
   },
   "contact": {
-    "title": "Leave your number, we'll call you back!",
+    "title": "Leave your number for a free consultation",
     "form": {
       "name": "Name",
       "phone": "Phone number",
       "username": "Telegram username",
       "message": "Message",
+      "messagePlaceholder": "Example: Need a website for business",
       "submit": "Send",
       "submitting": "Sending..."
     },

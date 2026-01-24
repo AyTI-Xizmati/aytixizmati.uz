@@ -8,6 +8,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import SEO from './components/SEO';
 import PixelSnow from './components/PixelSnow';
+import ClickSpark from './components/ClickSpark';
 import './App.css';
 
 function Home() {
@@ -68,6 +69,7 @@ function Home() {
         direction={185}
         color="#38BDF8"
       />
+      <ClickSpark />
       <SEO />
       <Main />
       <Pricing />

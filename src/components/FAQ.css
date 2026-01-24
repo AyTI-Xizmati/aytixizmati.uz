@@ -5,6 +5,7 @@
   color: #fff;
   overflow: hidden;
   min-height: 100vh;
+  scroll-margin-top: 100px;
 }
 
 .faq .section-title {
@@ -74,6 +75,10 @@
 }
 
 @media (max-width: 768px) {
+  .faq {
+    scroll-margin-top: 80px;
+  }
+
   .faq-question {
     font-size: 1rem;
   }

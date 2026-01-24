@@ -213,9 +213,10 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="4"
+                  rows="3"
                   required
                   aria-required="true"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
 
