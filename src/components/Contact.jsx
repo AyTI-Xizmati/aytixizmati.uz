@@ -88,15 +88,13 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      // Extract digits only (without +998) for Google Sheets
-      const phoneDigitsOnly = formData.phone.replace(/\D/g, '').slice(3); // Remove +998
-      // Full phone with country code for Telegram bot (no spaces)
-      const phoneFullFormat = formData.phone.replace(/\s/g, ''); // +998338880133
+      const phoneDigitsOnly = formData.phone.replace(/\D/g, '').slice(3);
+      const phoneFullFormat = formData.phone.replace(/\s/g, '');
 
       const body = new URLSearchParams({
         name: formData.name,
-        phone: phoneDigitsOnly, // Google Sheets: 338880133
-        phoneDisplay: phoneFullFormat, // Telegram bot: +998338880133
+        phone: phoneDigitsOnly,
+        phoneDisplay: phoneFullFormat,
         username: formData.username,
         message: formData.message
       }).toString();
@@ -238,9 +236,6 @@ const Contact = () => {
               </a>
               <a href="https://t.me/AyTi_xizmatibot" target="_blank" rel="noopener noreferrer">
                 {t('footer.bot')}
-              </a>
-              <a href="tel:+998773009928">
-                +998 77 300 99 28
               </a>
               <span className="contact-location">
                 {t('footer.address')}

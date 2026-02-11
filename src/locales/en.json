@@ -11,8 +11,14 @@
   },
   "hero": {
     "title": "RESULTS-DRIVEN WEBSITES FOR YOUR BUSINESS",
+    "subtitle": "Professional websites for your business — modern design, fast performance, and a results-driven approach",
     "cta1": "Order a Website",
-    "cta2": "View Services"
+    "cta2": "View Services",
+    "stats": [
+      { "number": "7+", "label": "Projects" },
+      { "number": "5+", "label": "Clients" },
+      { "number": "1+", "label": "Year of experience" }
+    ]
   },
   "pricing": {
     "title": "Our Pricing Plans",
@@ -20,12 +26,13 @@
     "plans": [
       {
         "name": "Minimal",
-        "price": "$100+",
+        "price": "$175+",
         "features": [
           "1-page website",
           "Order button",
           "Domain + hosting",
-          "Mobile responsive design"
+          "Mobile responsive design",
+          "SEO (Google)"
         ]
       },
       {
@@ -141,6 +148,115 @@
     "bot": "Telegram bot",
     "address": "Tashkent city, Olmazor district",
     "copyright": "© 2026 AyTi Xizmati. All rights reserved."
+  },
+  "aksiya": {
+    "hero": {
+      "badge": "Limited offer",
+      "title": "A professional website for your business — only $87",
+      "subtitle": "",
+      "cta": "Reserve your spot",
+      "cta2": "Message on Telegram",
+      "why": {
+        "title": "Why exactly $87?",
+        "intro": "This isn't a random price.",
+        "reason": "Right now, our top priority is building more real projects, a strong portfolio, and results-based case studies. That's why we're offering a special launch deal for 10 clients.",
+        "price_note": "$87 is a price with minimal profit, but without compromising on quality.",
+        "benefits": [
+          "You get a professional website",
+          "We build our portfolio with real projects to level up"
+        ],
+        "closing": "Once 10 projects are completed, the price goes up."
+      }
+    },
+    "problem": {
+      "title": "Why does your business need a website?",
+      "items": [
+        {
+          "title": "Can clients find you on Google?",
+          "description": "If not — you don't exist. A website builds trust and credibility."
+        },
+        {
+          "title": "Is your business dependent only on social media?",
+          "description": "Your own website is a platform you own and control."
+        },
+        {
+          "title": "You're running ads, but where do you send clients?",
+          "description": "A website is the central page that converts traffic into orders."
+        }
+      ],
+      "cta": "I need a website too"
+    },
+    "offer": {
+      "title": "Special launch offer\nonly 10 spots",
+      "price": "What's included for $87?",
+      "features": [
+        "1-page modern landing page",
+        "Domain + hosting (1 year)",
+        "Mobile design",
+        "Google visibility (basic SEO)",
+        "Ready in 3–5 days"
+      ],
+      "cta": "Get a spot for $87"
+    },
+    "process": {
+      "title": "How do we work?",
+      "steps": [
+        "Submit your request",
+        "We discuss the project",
+        "Pay 50% upfront",
+        "Send your materials",
+        "Website ready in 3–5 days"
+      ],
+      "cta": "Start the process"
+    },
+    "audience": {
+      "title": "Who is this for?",
+      "items": [
+        "New businesses just starting out",
+        "Service professionals",
+        "Those who need a portfolio or personal brand page",
+        "Those who want to direct ad traffic to a website"
+      ],
+      "cta": "Get started"
+    },
+    "trust": {
+      "title": "Why us?",
+      "items": [
+        "Only 10 projects — full attention to each one",
+        "Price goes up after the offer ends",
+        "All technical setup is on us"
+      ],
+      "cta": "Check availability"
+    },
+    "fomo": {
+      "title": "The offer closes soon",
+      "spotsText": "Out of 10 spots",
+      "spotsTaken": "taken",
+      "cta": "Reserve now",
+      "timer": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Min",
+        "seconds": "Sec",
+        "expired": "Offer has ended"
+      }
+    },
+    "form": {
+      "title": "Place your order now",
+      "subtitle": "Leave your info — we'll contact you in 10–15 minutes.",
+      "name": "Your name",
+      "phone": "Phone number",
+      "username": "Telegram username",
+      "message": "Message",
+      "messagePlaceholder": "Example: briefly about your project",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": "Your message was sent! We'll contact you soon.",
+      "error": "An error occurred. Please try again."
+    },
+    "footer": {
+      "copyright": "© 2026 AyTi Xizmati. All rights reserved."
+    }
   },
   "seo": {
     "title": "AyTi Xizmati - Result-Oriented Website and Telegram Bot Creation",

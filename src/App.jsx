@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import SEO from './components/SEO';
 import PixelSnow from './components/PixelSnow';
 import ClickSpark from './components/ClickSpark';
+import Aksiya from './components/Aksiya';
 import './App.css';
 
 function Home() {
@@ -83,6 +84,9 @@ function Home() {
 function App() {
   return (
     <Routes>
+      {/* Aksiya routes */}
+      <Route path="/aksiya" element={<Aksiya />} />
+      <Route path="/:lang/aksiya" element={<Aksiya />} />
       {/* Language + Section routes */}
       <Route path="/:lang/:section" element={<Home />} />
       {/* Language only routes */}

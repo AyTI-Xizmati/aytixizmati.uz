@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { FaGlobe, FaPhone } from 'react-icons/fa';
+import { FaGlobe, FaCode, FaUsers, FaClock } from 'react-icons/fa';
 import './Main.css';
 
 const Main = () => {
@@ -38,11 +38,6 @@ const Main = () => {
         <div className="nav-container">
           <div className="logo-container">
             <h1 className="logo">AyTi Xizmati</h1>
-            <a href="tel:+998773009928" className="phone-link">
-              +998 77-300-99-28
-              <FaPhone className="phone-icon" />
-            </a>
-
             <div className="lang-selector-wrapper">
               <button
                 className="lang-toggle-btn"
@@ -91,12 +86,6 @@ const Main = () => {
             <li><a href="#jarayon" onClick={closeMenu}>{t('nav.process')}</a></li>
             <li><a href="#faq" onClick={closeMenu}>{t('nav.faq')}</a></li>
             <li><a href="#aloqa" onClick={closeMenu}>{t('nav.contact')}</a></li>
-            <li className="mobile-phone-item">
-              <a href="tel:+998773009928" className="mobile-phone-link" onClick={closeMenu}>
-                +998 77-300-99-28
-                <FaPhone className="phone-icon" />
-              </a>
-            </li>
           </ul>
         </div>
       </nav>
@@ -105,11 +94,26 @@ const Main = () => {
         <h1 className="main-title">
           {t('hero.title')}
         </h1>
+        <p className="main-subtitle">{t('hero.subtitle')}</p>
         <div className="main-buttons">
           <a href="#aloqa" className="btn btn-primary">{t('hero.cta1')}</a>
           <a href="#narxlar" className="btn btn-secondary">
             {t('hero.cta2')}
           </a>
+        </div>
+        <div className="hero-stats">
+          {t('hero.stats', { returnObjects: true }).map((stat, i) => {
+            const icons = [<FaCode />, <FaUsers />, <FaClock />];
+            return (
+              <div key={i} className="hero-stat-item">
+                <span className="hero-stat-icon">{icons[i]}</span>
+                <div className="hero-stat-text">
+                  <span className="hero-stat-number">{stat.number}</span>
+                  <span className="hero-stat-label">{stat.label}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

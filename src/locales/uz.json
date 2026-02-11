@@ -11,8 +11,14 @@
   },
   "hero": {
     "title": "NATIJAGA yo'naltirilgan SAYTLAR ishlab chiqamiz",
+    "subtitle": "Biznesingiz uchun professional saytlar — zamonaviy dizayn, tez ishlash va natijaga yo'naltirilgan yondashuv",
     "cta1": "Buyurtma berish",
-    "cta2": "Xizmatlar bilan tanishish"
+    "cta2": "Xizmatlar bilan tanishish",
+    "stats": [
+      { "number": "7+", "label": "Loyihalar" },
+      { "number": "5+", "label": "Mijozlar" },
+      { "number": "1+", "label": "Yillik tajriba" }
+    ]
   },
   "pricing": {
     "title": "Xizmat tariflarimiz",
@@ -20,12 +26,13 @@
     "plans": [
       {
         "name": "Minimal",
-        "price": "$100+",
+        "price": "$175+",
         "features": [
           "1 sahifali sayt",
           "Buyurtma tugmasi",
           "Domen + hosting",
-          "Mobilga mos dizayn"
+          "Mobilga mos dizayn",
+          "SEO (Google)"
         ]
       },
       {
@@ -141,6 +148,115 @@
     "bot": "Telegram bot",
     "address": "Toshkent shahar, Olmazor tumani",
     "copyright": "© 2026 AyTi Xizmati. Barcha huquqlar himoyalangan."
+  },
+  "aksiya": {
+    "hero": {
+      "badge": "Cheklangan taklif",
+      "title": "Biznesingiz uchun maxsus\nwebsite atigi 87$",
+      "subtitle": "",
+      "cta": "Joyni band qilish",
+      "cta2": "Telegramdan yozish",
+      "why": {
+        "title": "Nega aynan 87$?",
+        "intro": "Bu tasodifiy qo'yilgan narx emas.",
+        "reason": "Hozir biz uchun eng muhim narsa — ko'proq real loyiha, kuchli portfolio va natijaga asoslangan case'lar yig'ish. Shu sabab 10 ta mijoz uchun maxsus start aksiyasini taklif qildik.",
+        "price_note": "87$ — bu minimal foyda bilan ishlanadigan, lekin sifatdan voz kechilmaydigan narx.",
+        "benefits": [
+          "Siz professional website'ga ega bo'lasiz",
+          "Biz esa real loyihalar asosida keyingi bosqichga o'tamiz"
+        ],
+        "closing": "10 ta loyiha yakunlangach, paket narxi oshiriladi."
+      }
+    },
+    "problem": {
+      "title": "Nega biznesga website kerak?",
+      "items": [
+        {
+          "title": "Mijoz sizni Google'da qidirganda topa oladimi?",
+          "description": "Topilmasa - mavjud emassiz. Website ishonch va jiddiylik beradi."
+        },
+        {
+          "title": "Biznesingiz faqat ijtimoiy tarmoqlarga bog'lanib qolmaganmi?",
+          "description": "Shaxsiy website - bu o'zingizga tegishli, nazorat sizda bo'lgan platforma."
+        },
+        {
+          "title": "Reklama qilasiz, lekin mijozni qayerga olib borasiz?",
+          "description": "Website - trafikni buyurtmaga aylantiradigan markaziy sahifa."
+        }
+      ],
+      "cta": "Menga ham website kerak"
+    },
+    "offer": {
+      "title": "Maxsus start aksiyasi\nfaqat 10 ta joy",
+      "price": "87$ ichiga nimalar kiradi?",
+      "features": [
+        "1 sahifali zamonaviy landing",
+        "Domen + hosting (1 yil)",
+        "Mobil dizayn",
+        "Google'da ko'rinish (asosiy SEO)",
+        "3–5 kun ichida tayyor"
+      ],
+      "cta": "87$ ga joyni olish"
+    },
+    "process": {
+      "title": "Qanday ishlaymiz?",
+      "steps": [
+        "Ariza qoldirasiz",
+        "Loyihani muhokama qilamiz",
+        "50% to'lov qilasiz",
+        "Ma'lumotlarni yuborasiz",
+        "3–5 kunda sayt tayyor"
+      ],
+      "cta": "Jarayonni boshlash"
+    },
+    "audience": {
+      "title": "Kimlar uchun mos?",
+      "items": [
+        "Endi boshlayotgan bizneslar",
+        "Xizmat ko'rsatuvchi mutaxassislar",
+        "Portfolio yoki shaxsiy brend sahifasi kerak bo'lganlar",
+        "Reklama trafikini websitega yo'naltirmoqchi bo'lganlar"
+      ],
+      "cta": "Boshlash"
+    },
+    "trust": {
+      "title": "Nega biz?",
+      "items": [
+        "Faqat 10 ta loyiha — har biriga alohida e'tibor",
+        "Aksiya tugagach narx oshadi",
+        "Texnik sozlash to'liq biz tomonda"
+      ],
+      "cta": "Joy qolganini tekshirish"
+    },
+    "fomo": {
+      "title": "Aksiya yopilishiga oz qoldi",
+      "spotsText": "10 ta joydan",
+      "spotsTaken": "band",
+      "cta": "Hozir band qilish",
+      "timer": {
+        "days": "Kun",
+        "hours": "Soat",
+        "minutes": "Minut",
+        "seconds": "Soniya",
+        "expired": "Aksiya yakunlandi"
+      }
+    },
+    "form": {
+      "title": "Hozir buyurtma bering",
+      "subtitle": "Ma'lumot qoldiring — 10–15 daqiqa ichida bog'lanamiz.",
+      "name": "Ismingiz",
+      "phone": "Telefon raqam",
+      "username": "Telegram username",
+      "message": "Xabar",
+      "messagePlaceholder": "Masalan loyihangiz haqida qisqacha ma'lumot",
+      "submit": "Yuborish",
+      "submitting": "Yuborilmoqda...",
+      "success": "Xabaringiz yuborildi! Tez orada bog'lanamiz.",
+      "error": "Xatolik yuz berdi. Qayta urinib ko'ring."
+    },
+    "footer": {
+      "copyright": "© 2026 AyTi Xizmati. Barcha huquqlar himoyalangan."
+    }
   },
   "seo": {
     "title": "AyTi Xizmati - Natijaga yo'naltirilgan saytlar va Telegram botlar yaratish",
