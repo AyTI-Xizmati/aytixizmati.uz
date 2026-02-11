@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaGlobe, FaCode, FaUsers, FaClock } from 'react-icons/fa';
 import './Main.css';
 
@@ -91,6 +91,10 @@ const Main = () => {
       </nav>
       
       <div className="main-content">
+        <Link to={`/${i18n.language}/aksiya`} className="promo-banner">
+          <span className="promo-banner-text">{t('banner.text')}</span>
+          <span className="promo-banner-cta">{t('banner.cta')} →</span>
+        </Link>
         <h1 className="main-title">
           {t('hero.title')}
         </h1>

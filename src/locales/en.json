@@ -9,6 +9,10 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
+  "banner": {
+    "text": "Promo: Professional website for only $87",
+    "cta": "Learn more"
+  },
   "hero": {
     "title": "RESULTS-DRIVEN WEBSITES FOR YOUR BUSINESS",
     "subtitle": "Professional websites for your business — modern design, fast performance, and a results-driven approach",

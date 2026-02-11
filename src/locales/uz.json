@@ -9,6 +9,10 @@
     "openMenu": "Menyuni ochish",
     "closeMenu": "Menyuni yopish"
   },
+  "banner": {
+    "text": "Aksiya: Professional website atigi $87",
+    "cta": "Batafsil"
+  },
   "hero": {
     "title": "NATIJAGA yo'naltirilgan SAYTLAR ishlab chiqamiz",
     "subtitle": "Biznesingiz uchun professional saytlar — zamonaviy dizayn, tez ishlash va natijaga yo'naltirilgan yondashuv",
@@ -169,7 +173,7 @@
       }
     },
     "problem": {
-      "title": "Nega biznesga website kerak?",
+      "title": "Nega website kerak?",
       "items": [
         {
           "title": "Mijoz sizni Google'da qidirganda topa oladimi?",
