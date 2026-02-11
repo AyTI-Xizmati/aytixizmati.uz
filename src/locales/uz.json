@@ -169,7 +169,7 @@
           "Siz professional website'ga ega bo'lasiz",
           "Biz esa real loyihalar asosida keyingi bosqichga o'tamiz"
         ],
-        "closing": "10 ta loyiha yakunlangach, paket narxi oshiriladi."
+        "closing": "10 ta loyiha yakunlangach\npaket narxi oshiriladi."
       }
     },
     "problem": {
@@ -192,7 +192,7 @@
     },
     "offer": {
       "title": "Maxsus start aksiyasi\nfaqat 10 ta joy",
-      "price": "87$ ichiga nimalar kiradi?",
+      "price": "87$ ichiga\nnimalar kiradi?",
       "features": [
         "1 sahifali zamonaviy landing",
         "Domen + hosting (1 yil)",

@@ -121,11 +121,10 @@
 
 /* ===== 1. HERO ===== */
 .ak-hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 1rem 4rem;
+  padding: 8rem 1rem 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -376,6 +375,7 @@
   color: #ef4444;
   font-weight: 500;
   margin: 0;
+  white-space: pre-line;
 }
 
 /* ===== SECTIONS ===== */
@@ -471,6 +471,7 @@
   color: #fff;
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
+  white-space: normal;
 }
 
 /* ===== 4. PROCESS ===== */
@@ -717,7 +718,7 @@
 /* ===== MOBILE ===== */
 @media (max-width: 640px) {
   .ak-hero {
-    padding: 5rem 1rem 3rem;
+    padding: 6rem 1rem 4rem;
   }
   .ak-hero-price {
     font-size: 3.5rem;
@@ -736,6 +737,7 @@
   }
   .ak-offer-price {
     font-size: 2.5rem;
+    white-space: pre-line;
   }
   .ak-timer-block {
     min-width: 50px;
