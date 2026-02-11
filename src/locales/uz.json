@@ -246,13 +246,13 @@
       }
     },
     "form": {
-      "title": "Hozir buyurtma bering",
+      "title": "Ariza qoldiring",
       "subtitle": "Ma'lumot qoldiring tez vaqt ichida aloqaga chiqamiz",
       "name": "Ismingiz",
       "phone": "Telefon raqam",
       "username": "Telegram username",
       "message": "Xabar",
-      "messagePlaceholder": "Masalan loyihangiz haqida qisqacha ma'lumot",
+      "messagePlaceholder": "Biznesingiz haqida izoh yozib keting",
       "submit": "Yuborish",
       "submitting": "Yuborilmoqda...",
       "success": "Xabaringiz yuborildi! Tez orada bog'lanamiz.",

@@ -352,7 +352,6 @@ const Aksiya = () => {
         <div className="ak-footer-links">
           <a href="https://t.me/AyTi_Xizmati" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a href="https://www.instagram.com/ayti_xizmati" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="tel:+998773009928">+998 77 300 99 28</a>
         </div>
         <p className="ak-footer-copy">{t('aksiya.footer.copyright')}</p>
       </footer>
