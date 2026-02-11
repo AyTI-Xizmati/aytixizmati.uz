@@ -191,7 +191,7 @@
       "cta": "Menga ham website kerak"
     },
     "offer": {
-      "title": "Maxsus start aksiyasi\nfaqat 10 ta joy",
+      "title": "",
       "price": "87$ ichiga\nnimalar kiradi?",
       "features": [
         "1 sahifali zamonaviy landing",
@@ -246,8 +246,8 @@
       }
     },
     "form": {
-      "title": "Ariza qoldiring",
-      "subtitle": "Ma'lumot qoldiring tez vaqt ichida aloqaga chiqamiz",
+      "title": "Ariza qoldirish",
+      "subtitle": "Tez vaqt ichida aloqaga chiqamiz",
       "name": "Ismingiz",
       "phone": "Telefon raqam",
       "username": "Telegram username",

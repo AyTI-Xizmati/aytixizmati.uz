@@ -300,7 +300,14 @@
   flex-shrink: 0;
 }
 
-/* Why $87 */
+/* Why $87 — divider inside hero card */
+.ak-why-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 2rem 0;
+}
+
 .ak-why-top {
   border: 1px solid #1f2937;
   border-radius: 10px;
@@ -704,6 +711,18 @@
 .ak-hero .ak-hero-title { animation-delay: 0.2s; }
 .ak-hero .ak-hero-sub { animation-delay: 0.3s; }
 .ak-hero .ak-hero-buttons { animation-delay: 0.4s; }
+.ak-hero .ak-why-divider,
+.ak-hero .ak-why-top,
+.ak-hero .ak-why-highlight,
+.ak-hero .ak-why-benefits,
+.ak-hero .ak-why-closing {
+  animation: akBlurIn 0.7s ease both;
+}
+.ak-hero .ak-why-divider { animation-delay: 0.5s; }
+.ak-hero .ak-why-top { animation-delay: 0.6s; }
+.ak-hero .ak-why-highlight { animation-delay: 0.7s; }
+.ak-hero .ak-why-benefits { animation-delay: 0.8s; }
+.ak-hero .ak-why-closing { animation-delay: 0.9s; }
 
 /* Scroll reveal */
 .ak-reveal {

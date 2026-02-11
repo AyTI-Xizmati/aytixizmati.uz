@@ -207,12 +207,9 @@ const Aksiya = () => {
               {t('aksiya.hero.cta2')}
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* WHY $87 */}
-      <section className="ak-section ak-reveal">
-        <div className="ak-wrap">
+          {/* WHY $87 — inside hero card */}
+          <div className="ak-why-divider" />
           <div className="ak-why-top">
             <h2 className="ak-why-title">{t('aksiya.hero.why.title')}</h2>
             <p className="ak-why-intro">{t('aksiya.hero.why.intro')}</p>
