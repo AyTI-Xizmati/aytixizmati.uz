@@ -3,9 +3,9 @@ import { Routes, Route, useParams, Navigate, useLocation } from 'react-router-do
 import { useTranslation } from 'react-i18next';
 import Main from './components/Main';
 import SEO from './components/SEO';
-import ClickSpark from './components/ClickSpark';
 import './App.css';
 
+const ClickSpark = lazy(() => import('./components/ClickSpark'));
 const PixelSnow = lazy(() => import('./components/PixelSnow'));
 const Aksiya = lazy(() => import('./components/Aksiya'));
 const Pricing = lazy(() => import('./components/Pricing'));
@@ -73,7 +73,7 @@ function Home() {
           color="#38BDF8"
         />
       </Suspense>
-      <ClickSpark />
+      <Suspense fallback={null}><ClickSpark /></Suspense>
       <SEO />
       <Main />
       <Suspense fallback={null}>

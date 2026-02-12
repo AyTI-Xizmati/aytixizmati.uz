@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FaTelegramPlane } from 'react-icons/fa';
-import { HiOutlineCalendar } from 'react-icons/hi';
+import { TelegramIcon, CalendarIcon } from './Icons';
 import './Aksiya.css';
 
 const DEADLINE = new Date('2026-03-15T23:59:59');
@@ -184,11 +183,6 @@ const Aksiya = () => {
 
       {/* 1. HERO */}
       <section className="ak-hero">
-        <div className="ak-aurora">
-          <div className="ak-aurora-beam ak-aurora-beam-1" />
-          <div className="ak-aurora-beam ak-aurora-beam-2" />
-          <div className="ak-aurora-beam ak-aurora-beam-3" />
-        </div>
         <div className="ak-wrap">
           <span className="ak-badge">{t('aksiya.hero.badge')}</span>
           <div className="ak-hero-price">
@@ -199,11 +193,11 @@ const Aksiya = () => {
 
           <div className="ak-hero-buttons">
             <button className="ak-btn" onClick={scrollToForm}>
-              <HiOutlineCalendar className="ak-btn-icon" />
+              <CalendarIcon className="ak-btn-icon" />
               {t('aksiya.hero.cta')}
             </button>
             <a className="ak-btn ak-btn-outline" href="https://t.me/AyTi_xizmatibot" target="_blank" rel="noopener noreferrer">
-              <FaTelegramPlane className="ak-btn-icon" />
+              <TelegramIcon className="ak-btn-icon" />
               {t('aksiya.hero.cta2')}
             </a>
           </div>

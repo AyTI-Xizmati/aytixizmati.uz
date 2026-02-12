@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, Link } from 'react-router-dom';
-import { FaGlobe, FaCode, FaUsers, FaClock } from 'react-icons/fa';
+import { GlobeIcon, CodeIcon, UsersIcon, ClockIcon } from './Icons';
 import './Main.css';
 
 const Main = () => {
@@ -46,7 +46,7 @@ const Main = () => {
                 aria-expanded={showLangDropdown}
                 aria-haspopup="true"
               >
-                <FaGlobe className="lang-icon" />
+                <GlobeIcon className="lang-icon" />
                 <span className="lang-text">{i18n.language.toUpperCase()}</span>
               </button>
 
@@ -91,7 +91,11 @@ const Main = () => {
       </nav>
       
       <div className="main-content">
-        <Link to={`/${i18n.language}/aksiya`} className="promo-banner">
+        <Link
+          to={`/${i18n.language}/aksiya`}
+          className="promo-banner"
+          onMouseEnter={() => import('./Aksiya')}
+        >
           <span className="promo-banner-dot" />
           <span className="promo-banner-text">{t('banner.text')}</span>
           <span className="promo-banner-cta">{t('banner.cta')} →</span>
@@ -108,7 +112,7 @@ const Main = () => {
         </div>
         <div className="hero-stats">
           {t('hero.stats', { returnObjects: true }).map((stat, i) => {
-            const icons = [<FaCode />, <FaUsers />, <FaClock />];
+            const icons = [<CodeIcon />, <UsersIcon />, <ClockIcon />];
             return (
               <div key={i} className="hero-stat-item">
                 <span className="hero-stat-icon">{icons[i]}</span>
