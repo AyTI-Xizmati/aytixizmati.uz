@@ -2,16 +2,16 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, useParams, Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Main from './components/Main';
-import Pricing from './components/Pricing';
-import Process from './components/Process';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import SEO from './components/SEO';
 import ClickSpark from './components/ClickSpark';
 import './App.css';
 
 const PixelSnow = lazy(() => import('./components/PixelSnow'));
 const Aksiya = lazy(() => import('./components/Aksiya'));
+const Pricing = lazy(() => import('./components/Pricing'));
+const Process = lazy(() => import('./components/Process'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function Home() {
   const { lang, section } = useParams();
@@ -76,10 +76,12 @@ function Home() {
       <ClickSpark />
       <SEO />
       <Main />
-      <Pricing />
-      <Process />
-      <FAQ />
-      <Contact />
+      <Suspense fallback={null}>
+        <Pricing />
+        <Process />
+        <FAQ />
+        <Contact />
+      </Suspense>
     </>
   );
 }
