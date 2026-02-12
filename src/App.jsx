@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, useParams, Navigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Main from './components/Main';
@@ -7,10 +7,11 @@ import Process from './components/Process';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import SEO from './components/SEO';
-import PixelSnow from './components/PixelSnow';
 import ClickSpark from './components/ClickSpark';
-import Aksiya from './components/Aksiya';
 import './App.css';
+
+const PixelSnow = lazy(() => import('./components/PixelSnow'));
+const Aksiya = lazy(() => import('./components/Aksiya'));
 
 function Home() {
   const { lang, section } = useParams();
@@ -57,19 +58,21 @@ function Home() {
 
   return (
     <>
-      <PixelSnow
-        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
-        flakeSize={0.005}
-        pixelResolution={500}
-        speed={2.7}
-        depthFade={20}
-        farPlane={5}
-        brightness={0.7}
-        density={0.4}
-        variant="round"
-        direction={185}
-        color="#38BDF8"
-      />
+      <Suspense fallback={null}>
+        <PixelSnow
+          style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
+          flakeSize={0.005}
+          pixelResolution={500}
+          speed={2.7}
+          depthFade={20}
+          farPlane={5}
+          brightness={0.7}
+          density={0.4}
+          variant="round"
+          direction={185}
+          color="#38BDF8"
+        />
+      </Suspense>
       <ClickSpark />
       <SEO />
       <Main />
@@ -85,8 +88,8 @@ function App() {
   return (
     <Routes>
       {/* Aksiya routes */}
-      <Route path="/aksiya" element={<Aksiya />} />
-      <Route path="/:lang/aksiya" element={<Aksiya />} />
+      <Route path="/aksiya" element={<Suspense fallback={null}><Aksiya /></Suspense>} />
+      <Route path="/:lang/aksiya" element={<Suspense fallback={null}><Aksiya /></Suspense>} />
       {/* Language + Section routes */}
       <Route path="/:lang/:section" element={<Home />} />
       {/* Language only routes */}

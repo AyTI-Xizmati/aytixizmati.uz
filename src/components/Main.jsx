@@ -92,6 +92,7 @@ const Main = () => {
       
       <div className="main-content">
         <Link to={`/${i18n.language}/aksiya`} className="promo-banner">
+          <span className="promo-banner-dot" />
           <span className="promo-banner-text">{t('banner.text')}</span>
           <span className="promo-banner-cta">{t('banner.cta')} →</span>
         </Link>
