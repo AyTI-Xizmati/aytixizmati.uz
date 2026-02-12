@@ -8,6 +8,7 @@
   justify-content: center;
   overflow: hidden;
   text-align: center;
+  padding-top: 100px;
 }
 
 .ballpit-background {
@@ -182,7 +183,6 @@
   max-width: 1200px;
   padding: 0 40px;
   z-index: 100;
-  margin-top: 60px;
   position: relative;
 }
 
@@ -490,7 +490,11 @@
 
   .main-content {
     padding: 0 20px;
-    margin-top: 30px;
+    margin-top: 0;
+  }
+
+  .main-section {
+    padding-top: 90px;
   }
 
   .hero-stats {
