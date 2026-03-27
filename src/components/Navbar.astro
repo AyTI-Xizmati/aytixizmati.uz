@@ -1,0 +1,108 @@
+---
+interface Props {
+  lang: 'uz' | 'ru' | 'en';
+  nav: {
+    home: string;
+    services: string;
+    process: string;
+    faq: string;
+    contact: string;
+  };
+}
+
+const { lang, nav } = Astro.props;
+
+const languages = [
+  { code: 'uz', name: "O'zbekcha", flag: '\u{1F1FA}\u{1F1FF}', href: '/' },
+  { code: 'ru', name: '\u0420\u0443\u0441\u0441\u043A\u0438\u0439', flag: '\u{1F1F7}\u{1F1FA}', href: '/ru' },
+  { code: 'en', name: 'English', flag: '\u{1F1EC}\u{1F1E7}', href: '/en' },
+];
+---
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo-container">
+      <h1 class="logo">AyTi Xizmati</h1>
+      <div class="lang-selector-wrapper">
+        <button
+          class="lang-toggle-btn"
+          id="lang-toggle"
+          aria-label="Til tanlash"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="lang-text">{lang.toUpperCase()}</span>
+        </button>
+        <div class="lang-dropdown-menu" id="lang-dropdown" style="display:none;">
+          {languages.map(l => (
+            <a
+              class={`lang-dropdown-item ${lang === l.code ? 'active' : ''}`}
+              href={l.href}
+            >
+              <span class="flag">{l.flag}</span>
+              <span class="lang-name">{l.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button
+        class="menu-icon"
+        id="menu-toggle"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#asosiy">{nav.home}</a></li>
+      <li><a href="#narxlar">{nav.services}</a></li>
+      <li><a href="#jarayon">{nav.process}</a></li>
+      <li><a href="#faq">{nav.faq}</a></li>
+      <li><a href="#aloqa">{nav.contact}</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const langToggle = document.getElementById('lang-toggle');
+  const langDropdown = document.getElementById('lang-dropdown');
+
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = navMenu?.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      menuToggle?.classList.remove('open');
+    });
+  });
+
+  langToggle?.addEventListener('click', () => {
+    const isVisible = langDropdown?.style.display === 'none';
+    if (langDropdown) langDropdown.style.display = isVisible ? 'block' : 'none';
+    langToggle.setAttribute('aria-expanded', String(isVisible));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langToggle?.contains(e.target as Node) && !langDropdown?.contains(e.target as Node)) {
+      if (langDropdown) langDropdown.style.display = 'none';
+      langToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>

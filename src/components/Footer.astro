@@ -1,0 +1,31 @@
+---
+interface Props {
+  footer: {
+    telegram: string;
+    instagram: string;
+    bot: string;
+    address: string;
+    copyright: string;
+  };
+}
+
+const { footer } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footer-contacts">
+    <div class="footer-links">
+      <a href="https://t.me/AyTi_Xizmati" target="_blank" rel="noopener noreferrer">
+        {footer.telegram}
+      </a>
+      <a href="https://www.instagram.com/ayti_xizmati" target="_blank" rel="noopener noreferrer">
+        {footer.instagram}
+      </a>
+      <a href="https://t.me/AyTi_xizmatibot" target="_blank" rel="noopener noreferrer">
+        {footer.bot}
+      </a>
+      <span class="contact-location">{footer.address}</span>
+    </div>
+  </div>
+  <p class="copyright">{footer.copyright}</p>
+</footer>

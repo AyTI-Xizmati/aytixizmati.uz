@@ -1,0 +1,31 @@
+---
+interface Props {
+  process: {
+    title: string;
+    steps: {
+      number: string;
+      title: string;
+      description: string;
+    }[];
+  };
+}
+
+const { process } = Astro.props;
+---
+
+<section class="process" id="jarayon">
+  <div class="container">
+    <h2 class="section-title">{process.title}</h2>
+    <div class="process-timeline">
+      {process.steps.map(step => (
+        <div class="process-step">
+          <div class="step-number">{step.number}</div>
+          <div class="step-content">
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

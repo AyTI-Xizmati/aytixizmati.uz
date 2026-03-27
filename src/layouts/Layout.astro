@@ -1,0 +1,174 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  lang: 'uz' | 'ru' | 'en';
+  title: string;
+  description: string;
+  keywords: string;
+  faqItems?: { question: string; answer: string }[];
+}
+
+const { lang, title, description, keywords, faqItems = [] } = Astro.props;
+
+const localeMap = { uz: 'uz_UZ', ru: 'ru_RU', en: 'en_US' };
+const langNames = { uz: "O'zbekcha", ru: 'Русский', en: 'English' };
+const baseUrl = 'https://aytixizmati.uz';
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${baseUrl}${currentPath === '/' ? '' : currentPath}`;
+
+const alternates = [
+  { lang: 'uz', href: baseUrl },
+  { lang: 'ru', href: `${baseUrl}/ru` },
+  { lang: 'en', href: `${baseUrl}/en` },
+];
+
+// Organization JSON-LD
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'AyTi Xizmati',
+  url: baseUrl,
+  logo: `${baseUrl}/favicon.svg`,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    availableLanguage: ['Uzbek', 'Russian', 'English'],
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tashkent',
+    addressRegion: 'Olmazor',
+    addressCountry: 'UZ',
+  },
+  sameAs: [
+    'https://t.me/AyTi_Xizmati',
+    'https://www.instagram.com/ayti_xizmati',
+  ],
+};
+
+// WebSite JSON-LD
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'AyTi Xizmati',
+  url: baseUrl,
+  inLanguage: lang,
+};
+
+// Service JSON-LD
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Web Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'AyTi Xizmati',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Uzbekistan',
+  },
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '175',
+    highPrice: '1200',
+    priceCurrency: 'USD',
+  },
+};
+
+// FAQ JSON-LD
+const faqSchema = faqItems.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+} : null;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AyTi Xizmati" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${baseUrl}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AyTi Xizmati - Professional Web Development" />
+    <meta property="og:locale" content={localeMap[lang]} />
+    {Object.entries(localeMap).filter(([l]) => l !== lang).map(([, locale]) => (
+      <meta property="og:locale:alternate" content={locale} />
+    ))}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${baseUrl}/og-image.png`} />
+
+    <!-- Canonical & Alternates -->
+    <link rel="canonical" href={canonicalUrl} />
+    {alternates.map(alt => (
+      <link rel="alternate" hreflang={alt.lang} href={alt.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={baseUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- DNS Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    {faqSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    )}
+
+    <!-- Analytics (deferred) -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var gs = document.createElement('script');
+          gs.async = 1;
+          gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y17JV81KRQ';
+          document.head.appendChild(gs);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-Y17JV81KRQ');
+          gtag('config', 'AW-17868962219');
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "v6d1s7dygu");
+        }, 2000);
+      });
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,57 @@
+---
+interface Props {
+  hero: {
+    title: string;
+    subtitle: string;
+    cta1: string;
+    cta2: string;
+    stats: { number: string; label: string }[];
+  };
+}
+
+const { hero } = Astro.props;
+---
+
+<section class="main-section" id="asosiy">
+  <slot name="background" />
+
+  <div class="main-content">
+    <h1 class="main-title">{hero.title}</h1>
+    <p class="main-subtitle">{hero.subtitle}</p>
+    <div class="main-buttons">
+      <a href="#aloqa" class="btn btn-primary">{hero.cta1}</a>
+      <a href="#narxlar" class="btn btn-secondary">{hero.cta2}</a>
+    </div>
+    <div class="hero-stats">
+      {hero.stats.map((stat, i) => (
+        <div class="hero-stat-item">
+          <span class="hero-stat-icon">
+            {i === 0 && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            )}
+            {i === 1 && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            )}
+            {i === 2 && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            )}
+          </span>
+          <div class="hero-stat-text">
+            <span class="hero-stat-number">{stat.number}</span>
+            <span class="hero-stat-label">{stat.label}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

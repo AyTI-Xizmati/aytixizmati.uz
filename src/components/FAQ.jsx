@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import './FAQ.css';
+import { useState } from 'react';
 
-const FAQ = () => {
-  const { t } = useTranslation();
+const FAQ = ({ faq }) => {
   const [activeId, setActiveId] = useState(null);
-  const faqItems = t('faq.items', { returnObjects: true }) || [];
-
-  const toggleFAQ = (id) => {
-    setActiveId(activeId === id ? null : id);
-  };
 
   return (
     <section className="faq" id="faq">
       <div className="container faq-container">
-        <h2 className="section-title">{t('faq.title')}</h2>
-
+        <h2 className="section-title">{faq.title}</h2>
         <div className="faq-list">
-          {Array.isArray(faqItems) && faqItems.map((item, index) => (
+          {faq.items.map((item, index) => (
             <div className="faq-item" key={index}>
-              <button 
+              <button
                 className={`faq-question ${activeId === index ? 'active' : ''}`}
-                onClick={() => toggleFAQ(index)}
+                onClick={() => setActiveId(activeId === index ? null : index)}
               >
                 {item.question}
                 <span className={`faq-icon ${activeId === index ? 'active' : ''}`}>+</span>

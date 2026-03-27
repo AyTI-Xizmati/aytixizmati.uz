@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import Pricing from '../../components/Pricing.astro';
+import Process from '../../components/Process.astro';
+import Footer from '../../components/Footer.astro';
+import FAQ from '../../components/FAQ.jsx';
+import Contact from '../../components/Contact.jsx';
+import PixelSnow from '../../components/PixelSnow.jsx';
+import ClickSpark from '../../components/ClickSpark.jsx';
+import data from '../../i18n/ru.json';
+
+const lang = 'ru';
+---
+
+<Layout
+  lang={lang}
+  title={data.seo.title}
+  description={data.seo.description}
+  keywords={data.seo.keywords}
+  faqItems={data.faq.items}
+>
+  <PixelSnow
+    client:only="react"
+    style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
+    flakeSize={0.005}
+    pixelResolution={500}
+    speed={2.7}
+    depthFade={20}
+    farPlane={5}
+    brightness={0.7}
+    density={0.4}
+    variant="round"
+    direction={185}
+    color="#38BDF8"
+  />
+  <ClickSpark client:only="react" />
+  <Navbar lang={lang} nav={data.nav} />
+  <Hero hero={data.hero} />
+  <Pricing pricing={data.pricing} />
+  <Process process={data.process} />
+  <FAQ client:visible faq={data.faq} />
+  <Contact client:visible contact={data.contact} />
+  <Footer footer={data.footer} />
+</Layout>
