@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Hero from '../../components/Hero.astro';
-import Pricing from '../../components/Pricing.astro';
+import Services from '../../components/Services.astro';
 import Process from '../../components/Process.astro';
 import Footer from '../../components/Footer.astro';
 import FAQ from '../../components/FAQ.jsx';
@@ -33,12 +33,12 @@ const lang = 'en';
     density={0.4}
     variant="round"
     direction={185}
-    color="#38BDF8"
+    color="#A1A1AA"
   />
   <ClickSpark client:only="react" />
   <Navbar lang={lang} nav={data.nav} />
   <Hero hero={data.hero} />
-  <Pricing pricing={data.pricing} />
+  <Services services={data.services} />
   <Process process={data.process} />
   <FAQ client:visible faq={data.faq} />
   <Contact client:visible contact={data.contact} />

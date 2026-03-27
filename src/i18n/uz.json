@@ -7,8 +7,9 @@
     "contact": "Aloqa"
   },
   "hero": {
-    "title": "NATIJAGA yo'naltirilgan SAYTLAR ishlab chiqamiz",
-    "subtitle": "Biznesingiz uchun professional saytlar — zamonaviy dizayn, tez ishlash va natijaga yo'naltirilgan yondashuv",
+    "title": "Biznesingiz uchun IT yechimlar",
+    "titleAccent": "hamyonbop va sifatli",
+    "subtitle": "Veb-saytlar, mobil ilovalar, Telegram botlar va boshqa IT xizmatlar — hamyonbop narxlarda professional natija",
     "cta1": "Buyurtma berish",
     "cta2": "Xizmatlar bilan tanishish",
     "stats": [
@@ -17,61 +18,52 @@
       { "number": "1+", "label": "Yillik tajriba" }
     ]
   },
-  "pricing": {
-    "title": "Xizmat tariflarimiz",
-    "cta": "Sayt buyurtma qilish",
-    "plans": [
+  "services": {
+    "title": "Xizmatlarimiz",
+    "subtitle": "Biznesingizni raqamli dunyoda rivojlantirish uchun kerak bo'lgan barcha IT yechimlar",
+    "cta": "Bepul maslahat olish",
+    "items": [
       {
-        "name": "Minimal",
-        "price": "$175+",
-        "features": [
-          "1 sahifali sayt",
-          "Buyurtma tugmasi",
-          "Domen + hosting",
-          "Mobilga mos dizayn",
-          "SEO (Google)"
-        ]
+        "icon": "website",
+        "title": "Veb-sayt yaratish",
+        "price": "$175 dan",
+        "description": "Zamonaviy, tez va mobilga moslashgan saytlar — biznesingizning onlayn yuzasi.",
+        "features": ["Landing sahifalar", "Korporativ saytlar", "Onlayn do'konlar", "SEO optimizatsiya"]
       },
       {
-        "name": "Standart",
-        "price": "$300+",
-        "features": [
-          "3-5 sahifa",
-          "Buyurtma formasi",
-          "Domen + hosting",
-          "Mobil qurilmalarga mos",
-          "SEO (Google)",
-          "Admin panel"
-        ]
+        "icon": "crm",
+        "title": "CRM tizimlar",
+        "price": "$300 dan",
+        "description": "Mijozlar bazasini boshqarish va sotuvni avtomatlashtirish tizimlari.",
+        "features": ["Mijozlar bazasi", "Avtomatik bildirishnomalar", "Hisobotlar", "Integratsiyalar"]
       },
       {
-        "name": "Biznes",
-        "price": "$600+",
-        "features": [
-          "5-7 sahifa",
-          "Xizmatlar bo'limlari",
-          "Buyurtma formasi",
-          "Domen + hosting",
-          "SEO (Google)",
-          "Admin panel",
-          "Analitika",
-          "Individual dizayn"
-        ]
+        "icon": "mobile",
+        "title": "Mobil ilovalar",
+        "price": "$500 dan",
+        "description": "Android va iOS uchun qulay va chiroyli mobil ilovalar.",
+        "features": ["Cross-platform", "UI/UX dizayn", "Push bildirishnomalar", "API integratsiya"]
       },
       {
-        "name": "Individual",
-        "price": "$1200+",
-        "features": [
-          "7+ sahifa",
-          "Individual yondashuv",
-          "Kengaytiriladigan struktura",
-          "Murojaat formasi",
-          "Domen + hosting",
-          "SEO (Google)",
-          "Individual dizayn",
-          "Admin panel",
-          "Analitika"
-        ]
+        "icon": "telegram",
+        "title": "Telegram botlar",
+        "price": "$100 dan",
+        "description": "Biznesingiz uchun avtomatlashtirilgan Telegram botlar.",
+        "features": ["Buyurtma qabul qilish", "Mijoz bilan aloqa", "To'lov integratsiya", "Admin panel"]
+      },
+      {
+        "icon": "support",
+        "title": "Texnik qo'llab-quvvatlash",
+        "price": "$50/oy",
+        "description": "Mavjud sayt va tizimlaringizni doimiy ishlashini ta'minlaymiz.",
+        "features": ["Xatoliklarni tuzatish", "Yangilanishlar", "Monitoring", "Tezkor yordam"]
+      },
+      {
+        "icon": "code",
+        "title": "Maxsus dasturlash",
+        "price": "Kelishuv",
+        "description": "Sizning ehtiyojlaringizga moslashtirilgan individual dasturiy yechimlar.",
+        "features": ["API yaratish", "Avtomatlashtirish", "Ma'lumotlar bazasi", "Integratsiya xizmatlari"]
       }
     ]
   },
@@ -104,24 +96,28 @@
     "title": "Savollaringizga shu yerda javob topasiz",
     "items": [
       {
-        "question": "Sayt qancha muddatda tayyor bo'ladi?",
-        "answer": "Sayt tayyorlanish muddati tanlangan tarif va loyiha hajmiga bog'liq. O'rtacha hisobda 5 kundan 30 kungacha bo'lgan muddatda loyiha yakunlanadi."
+        "question": "Loyiha qancha muddatda tayyor bo'ladi?",
+        "answer": "Loyiha turi va hajmiga qarab 5 kundan 60 kungacha. Oddiy sayt yoki bot 5-10 kun, mobil ilova yoki CRM 30-60 kun atrofida tayyor bo'ladi."
       },
       {
-        "question": "Sayt narxi nimaga bog'liq?",
-        "answer": "Sayt narxi tanlangan tarif, sahifalar soni va saytda joylashtiriladigan ma'lumotlar hajmiga qarab belgilanadi."
+        "question": "Narx nimaga bog'liq?",
+        "answer": "Narx xizmat turi, funksionallik hajmi va loyiha murakkabligiga qarab belgilanadi. Bepul maslahat orqali aniq narx olinadi."
       },
       {
-        "question": "Domen va hostingni o'zim olishim kerakmi?",
-        "answer": "Yo'q, 1 yillik domain va 1 oylik hosting biz tomonimizdan taqdim etiladi."
+        "question": "Qanday xizmatlarni taklif qilasizlar?",
+        "answer": "Veb-sayt yaratish, mobil ilovalar, Telegram botlar, CRM tizimlar, texnik qo'llab-quvvatlash va maxsus dasturlash xizmatlarini taklif qilamiz."
       },
       {
         "question": "Buyurtma berilgandan keyin jarayon qanday bo'ladi?",
-        "answer": "Avvolo loyiha uchun muammoga yechim beruvchi struktura ishlab chiqiladi va siz bilan tasdiqlanadi. Shundan so'ng ish boshlanadi."
+        "answer": "Avval bepul maslahat, keyin loyiha strukturasi va prototipi tayyorlanadi, siz bilan tasdiqlanadi, shundan so'ng ishlab chiqish boshlanadi."
       },
       {
-        "question": "Sayt topshirilgandan keyin texnik yordam bo'ladimi?",
-        "answer": "Ha. Sayt topshirilgandan so'ng tanlangan tarifga qarab 1 oydan 3 oygacha bepul texnik yordam ko'rsatiladi."
+        "question": "Loyiha topshirilgandan keyin texnik yordam bo'ladimi?",
+        "answer": "Ha. Barcha loyihalarga 1 oydan 3 oygacha bepul texnik qo'llab-quvvatlash ko'rsatiladi."
+      },
+      {
+        "question": "To'lov qanday amalga oshiriladi?",
+        "answer": "Loyiha boshida 50% oldindan to'lov, qolgan 50% loyiha topshirilgandan keyin to'lanadi."
       }
     ]
   },
@@ -147,8 +143,8 @@
     "copyright": "\u00a9 2026 AyTi Xizmati. Barcha huquqlar himoyalangan."
   },
   "seo": {
-    "title": "AyTi Xizmati - Natijaga yo'naltirilgan saytlar va Telegram botlar yaratish",
-    "description": "Professional darajadagi web saytlar, telegram botlar va IT yechimlar. Arzon narxlar va yuqori sifat. Toshkentda sayt yaratish xizmati.",
-    "keywords": "sayt yaratish, web sayt yaratish xizmatlari, sayt yaratish narxi, IT xizmatlar, professional web sayt, dasturlash xizmatlari, web dizayn, biznes uchun sayt, kompaniya uchun sayt, onlayn xizmatlar yaratish, telegram bot yasash xizmatlari"
+    "title": "AyTi Xizmati - Hamyonbop va sifatli IT xizmatlar: sayt, ilova, bot, CRM",
+    "description": "Veb-sayt yaratish, mobil ilovalar, Telegram botlar, CRM tizimlar va maxsus dasturlash xizmatlari. Hamyonbop narxlarda professional IT yechimlar Toshkentda.",
+    "keywords": "sayt yaratish, web sayt yaratish, IT xizmatlar, telegram bot yasash, mobil ilova yaratish, CRM tizim, dasturlash xizmatlari, web dizayn, biznes uchun sayt, hamyonbop sayt yaratish, texnik qo'llab-quvvatlash"
   }
 }
