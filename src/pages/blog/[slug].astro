@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import uz from '../../i18n/uz.json';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date,
+  author: {
+    '@type': 'Organization',
+    name: post.data.author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'AyTi Xizmati',
+    url: 'https://aytixizmati.uz',
+  },
+};
+---
+
+<Layout
+  lang={post.data.lang || 'uz'}
+  title={`${post.data.title} — AyTi Xizmati Blog`}
+  description={post.data.description}
+  keywords={post.data.tags.join(', ')}
+>
+  <Navbar lang={post.data.lang || 'uz'} nav={uz.nav} />
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <article class="blog-post">
+    <div class="container">
+      <a href="/blog" class="blog-back">&larr; Blog</a>
+      <div class="blog-post-meta">
+        <span class="blog-post-date">{post.data.date}</span>
+        <div class="blog-post-tags">
+          {post.data.tags.map(tag => (
+            <span class="blog-tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+      <h1 class="blog-post-title">{post.data.title}</h1>
+      <div class="blog-post-content">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <Footer footer={uz.footer} />
+</Layout>
