@@ -98,27 +98,59 @@
     "items": [
       {
         "question": "How long does a project take?",
-        "answer": "Depends on type and scope. A simple website or bot takes 5-10 days, a mobile app or CRM takes 30-60 days."
+        "answer": "From 5 to 60 days depending on type and scope. A landing page or Telegram bot takes 5–10 days, a corporate website 10–20 days, a CRM system 30–45 days, and a mobile app 30–60 days."
       },
       {
-        "question": "What does the price depend on?",
-        "answer": "The price depends on the service type, functionality scope, and project complexity. Get an exact quote through a free consultation."
+        "question": "How much does a website cost?",
+        "answer": "Landing pages start at $175, corporate websites at $300, online stores at $500. The exact price depends on features, design complexity, and number of pages. We provide a concrete quote during a free consultation."
+      },
+      {
+        "question": "How much does a Telegram bot cost?",
+        "answer": "A simple order-taking bot starts at $100. A bot with payment integration and admin panel runs $200–$400. CRM or third-party integrations are quoted individually."
+      },
+      {
+        "question": "Which platforms do you build mobile apps for?",
+        "answer": "Cross-platform apps for Android and iOS from a single codebase (React Native / Flutter). This saves time and money while preserving native speed and capabilities."
       },
       {
         "question": "What services do you offer?",
-        "answer": "Website development, mobile apps, Telegram bots, CRM systems, technical support, and custom software development."
+        "answer": "Websites (landing, corporate, e-commerce), mobile apps (Android and iOS), Telegram bots, CRM systems, technical support, and custom development. We also redesign existing sites."
       },
       {
-        "question": "How does the process work after ordering?",
-        "answer": "First a free consultation, then we develop the structure and prototype, confirm with you, and then development begins."
+        "question": "Do I need to buy the domain and hosting myself?",
+        "answer": "No. We provide 1 year of domain and 1 month of hosting. Afterwards, you can extend hosting with us or move to your own provider."
+      },
+      {
+        "question": "What is the process after ordering?",
+        "answer": "1) Free consultation and requirements gathering; 2) Project structure and design prototype; 3) After your approval, development begins; 4) Testing and launch; 5) Free technical support period."
       },
       {
         "question": "Is there technical support after delivery?",
-        "answer": "Yes. All projects include 1 to 3 months of free technical support."
+        "answer": "Yes. All projects include 1 to 3 months of free technical support: bug fixes, small edits, and consultations. After that you can continue on a monthly plan (from $50/mo)."
       },
       {
         "question": "How does payment work?",
-        "answer": "50% upfront payment when work begins, the remaining 50% after project delivery."
+        "answer": "50% upfront when work begins, the remaining 50% after delivery. We accept Click, Payme, cash or bank transfer. International clients can pay in USD."
+      },
+      {
+        "question": "Are your websites SEO-optimized?",
+        "answer": "Yes. Every site is built with SEO in mind: speed (Core Web Vitals), proper meta tags, sitemap, robots.txt, structured data (schema.org), mobile-friendly design, and Google Search Console setup. We also optimize for AI search engines (AEO)."
+      },
+      {
+        "question": "Will I be able to edit the website myself?",
+        "answer": "Yes. Corporate sites and stores include a simple admin panel — you can edit text, images, products and prices without a developer. We use Strapi, Sanity, or a custom solution."
+      },
+      {
+        "question": "Can you update or speed up my existing website?",
+        "answer": "Yes. We audit: SEO, speed, design, security. Then we recommend optimization, redesign, or a complete rebuild — whichever is faster and cheaper."
+      },
+      {
+        "question": "Do you work with clients outside Tashkent?",
+        "answer": "Yes. We work remotely with clients across Uzbekistan and internationally. Communication via Telegram, Zoom, phone, and email. Contracts are signed electronically."
+      },
+      {
+        "question": "What technologies do you work with?",
+        "answer": "Frontend: React, Next.js, Astro, Vue. Backend: Node.js, Python (Django/FastAPI), PHP (Laravel). Mobile: React Native, Flutter. Databases: PostgreSQL, MongoDB, MySQL. Cloud: Vercel, Railway, AWS, DigitalOcean."
       }
     ]
   },

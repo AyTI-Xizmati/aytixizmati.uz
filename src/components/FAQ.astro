@@ -1,0 +1,44 @@
+---
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faq: {
+    title: string;
+    items: FaqItem[];
+  };
+}
+
+const { faq } = Astro.props;
+---
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="container faq-container">
+    <h2 class="section-title" id="faq-title">{faq.title}</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      {faq.items.map((item) => (
+        <details
+          class="faq-item"
+          itemscope
+          itemprop="mainEntity"
+          itemtype="https://schema.org/Question"
+        >
+          <summary class="faq-question">
+            <span itemprop="name">{item.question}</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div
+            class="faq-answer"
+            itemscope
+            itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer"
+          >
+            <p itemprop="text">{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

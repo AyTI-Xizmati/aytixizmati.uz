@@ -1,8 +1,8 @@
 {
   "name": "aytixizmati",
   "type": "module",
-  "version": "2.0.0",
-  "homepage": "https://www.aytixizmati.uz",
+  "version": "2.1.0",
+  "homepage": "https://aytixizmati.uz",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.8.0",
-    "@astrojs/react": "^4.2.1",
     "@astrojs/sitemap": "^3.3.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "three": "^0.182.0"
   }
 }

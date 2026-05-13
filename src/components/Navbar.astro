@@ -18,12 +18,14 @@ const languages = [
   { code: 'ru', name: '\u0420\u0443\u0441\u0441\u043A\u0438\u0439', flag: '\u{1F1F7}\u{1F1FA}', href: '/ru' },
   { code: 'en', name: 'English', flag: '\u{1F1EC}\u{1F1E7}', href: '/en' },
 ];
+
+const homeHref = lang === 'uz' ? '/' : `/${lang}`;
 ---
 
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <div class="logo-container">
-      <h1 class="logo">AyTi Xizmati</h1>
+      <a class="logo" href={homeHref} aria-label="AyTi Xizmati \u2014 bosh sahifa">AyTi Xizmati</a>
       <div class="lang-selector-wrapper">
         <button
           class="lang-toggle-btn"

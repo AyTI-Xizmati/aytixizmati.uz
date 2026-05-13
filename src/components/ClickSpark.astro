@@ -1,0 +1,21 @@
+---
+---
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.addEventListener('click', (e) => {
+      const spark = document.createElement('div');
+      spark.className = 'click-spark';
+      spark.style.left = `${(e as MouseEvent).clientX}px`;
+      spark.style.top = `${(e as MouseEvent).clientY}px`;
+      for (let i = 0; i < 8; i++) {
+        const p = document.createElement('div');
+        p.className = 'spark-particle';
+        p.style.setProperty('--angle', `${i * 45}deg`);
+        spark.appendChild(p);
+      }
+      document.body.appendChild(spark);
+      setTimeout(() => spark.remove(), 600);
+    });
+  }
+</script>

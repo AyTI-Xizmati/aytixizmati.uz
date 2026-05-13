@@ -56,7 +56,7 @@ body {
 
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
 .logo-container { display: flex; align-items: center; gap: 1.5rem; }
-.logo { font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.5px; text-decoration: none; }
 .nav-menu { display: flex; list-style: none; gap: 2rem; }
 .nav-menu a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 1.3rem; transition: color 0.3s; }
 .nav-menu a:hover { color: var(--text); }
@@ -254,6 +254,8 @@ body {
 .faq .section-title { color: var(--text); }
 .faq-container { max-width: 800px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--text-dim); margin-bottom: 1rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary { list-style: none; }
 
 .faq-question {
   width: 100%; display: flex; justify-content: space-between; align-items: center;
@@ -261,11 +263,10 @@ body {
   font-size: 1.1rem; font-weight: 600; color: var(--text); transition: color 0.3s ease;
 }
 .faq-question:hover { color: var(--accent); }
-.faq-question.active { color: var(--accent); }
-.faq-icon { font-size: 1.5rem; transition: transform 0.3s ease; color: var(--accent-muted); margin-left: 1rem; }
-.faq-icon.active { transform: rotate(45deg); }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0,1,0,1); }
-.faq-answer.active { max-height: 200px; transition: max-height 0.5s ease-in-out; }
+.faq-item[open] > .faq-question { color: var(--accent); }
+.faq-icon { font-size: 1.5rem; transition: transform 0.3s ease; color: var(--accent-muted); margin-left: 1rem; display: inline-block; }
+.faq-item[open] > .faq-question > .faq-icon { transform: rotate(45deg); color: var(--accent); }
+.faq-answer { overflow: hidden; }
 .faq-answer p { padding-bottom: 1.5rem; color: var(--text-muted); line-height: 1.6; }
 
 /* ===== Contact ===== */

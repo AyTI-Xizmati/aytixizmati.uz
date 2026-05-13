@@ -7,7 +7,7 @@ import uz from '../../i18n/uz.json';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({
+  return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
@@ -15,50 +15,75 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+const lang = post.data.lang || 'uz';
+const baseUrl = 'https://aytixizmati.uz';
+const postUrl = `${baseUrl}/blog/${post.slug}`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
+  '@type': 'BlogPosting',
+  '@id': `${postUrl}#article`,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
   headline: post.data.title,
   description: post.data.description,
   datePublished: post.data.date,
+  dateModified: post.data.date,
+  inLanguage: lang,
+  keywords: post.data.tags.join(', '),
   author: {
     '@type': 'Organization',
     name: post.data.author,
+    url: baseUrl,
   },
   publisher: {
     '@type': 'Organization',
     name: 'AyTi Xizmati',
-    url: 'https://aytixizmati.uz',
+    url: baseUrl,
+    logo: { '@type': 'ImageObject', url: `${baseUrl}/favicon.svg` },
   },
+  image: `${baseUrl}/og-image.png`,
 };
+
+const breadcrumbs = [
+  { name: 'Asosiy', url: baseUrl },
+  { name: 'Blog', url: `${baseUrl}/blog` },
+  { name: post.data.title, url: postUrl },
+];
+
+const isPlaceholder = post.slug === 'placeholder';
 ---
 
 <Layout
-  lang={post.data.lang || 'uz'}
+  lang={lang}
   title={`${post.data.title} — AyTi Xizmati Blog`}
   description={post.data.description}
   keywords={post.data.tags.join(', ')}
+  ogType="article"
+  breadcrumbs={breadcrumbs}
+  noindex={isPlaceholder}
 >
-  <Navbar lang={post.data.lang || 'uz'} nav={uz.nav} />
-
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </Fragment>
 
-  <article class="blog-post">
+  <Navbar lang={lang} nav={uz.nav} />
+
+  <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
     <div class="container">
-      <a href="/blog" class="blog-back">&larr; Blog</a>
+      <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Asosiy</a> &rsaquo; <a href="/blog">Blog</a> &rsaquo;
+        <span aria-current="page">{post.data.title}</span>
+      </nav>
       <div class="blog-post-meta">
-        <span class="blog-post-date">{post.data.date}</span>
+        <time class="blog-post-date" datetime={post.data.date} itemprop="datePublished">{post.data.date}</time>
         <div class="blog-post-tags">
-          {post.data.tags.map(tag => (
+          {post.data.tags.map((tag) => (
             <span class="blog-tag">{tag}</span>
           ))}
         </div>
       </div>
-      <h1 class="blog-post-title">{post.data.title}</h1>
-      <div class="blog-post-content">
+      <h1 class="blog-post-title" itemprop="headline">{post.data.title}</h1>
+      <div class="blog-post-content" itemprop="articleBody">
         <Content />
       </div>
     </div>

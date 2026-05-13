@@ -1,21 +1,50 @@
 ---
 import '../styles/global.css';
 
+interface ServiceItem {
+  icon?: string;
+  title: string;
+  price: string;
+  description: string;
+  features?: string[];
+}
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface Props {
   lang: 'uz' | 'ru' | 'en';
   title: string;
   description: string;
   keywords: string;
   faqItems?: { question: string; answer: string }[];
+  serviceItems?: ServiceItem[];
+  breadcrumbs?: BreadcrumbItem[];
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  noindex?: boolean;
 }
 
-const { lang, title, description, keywords, faqItems = [] } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  keywords,
+  faqItems = [],
+  serviceItems = [],
+  breadcrumbs = [],
+  ogType = 'website',
+  ogImage,
+  noindex = false,
+} = Astro.props;
 
 const localeMap = { uz: 'uz_UZ', ru: 'ru_RU', en: 'en_US' };
-const langNames = { uz: "O'zbekcha", ru: 'Русский', en: 'English' };
 const baseUrl = 'https://aytixizmati.uz';
 const currentPath = Astro.url.pathname;
 const canonicalUrl = `${baseUrl}${currentPath === '/' ? '' : currentPath}`;
+const ogImageUrl = ogImage || `${baseUrl}/og-image.png`;
 
 const alternates = [
   { lang: 'uz', href: baseUrl },
@@ -23,26 +52,62 @@ const alternates = [
   { lang: 'en', href: `${baseUrl}/en` },
 ];
 
-// Organization JSON-LD
-const organizationSchema = {
+const orgId = `${baseUrl}/#org`;
+const websiteId = `${baseUrl}/#website`;
+const webpageId = `${canonicalUrl}#webpage`;
+
+// LocalBusiness JSON-LD (richer than Organization for a Tashkent-based business)
+const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
+  '@id': orgId,
   name: 'AyTi Xizmati',
+  alternateName: ['AyTi Xizmati IT', 'AytiXizmati'],
   url: baseUrl,
   logo: `${baseUrl}/favicon.svg`,
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    availableLanguage: ['Uzbek', 'Russian', 'English'],
-  },
+  image: `${baseUrl}/og-image.png`,
+  description:
+    'Veb-sayt, mobil ilova, Telegram bot, CRM tizimlar va maxsus dasturlash xizmatlari. Toshkent.',
+  priceRange: '$50–$1200',
+  telephone: '+998773009928',
+  email: 'info@aytixizmati.uz',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Tashkent',
-    addressRegion: 'Olmazor',
+    streetAddress: 'Olmazor tumani',
+    addressLocality: 'Toshkent',
+    addressRegion: 'Toshkent',
+    postalCode: '100000',
     addressCountry: 'UZ',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 41.3275,
+    longitude: 69.2817,
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'Uzbekistan' },
+    { '@type': 'City', name: 'Tashkent' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '20:00',
+    },
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: '+998773009928',
+      contactType: 'customer service',
+      availableLanguage: ['Uzbek', 'Russian', 'English'],
+      areaServed: 'UZ',
+    },
+  ],
   sameAs: [
     'https://t.me/AyTi_Xizmati',
+    'https://t.me/AyTi_xizmatibot',
     'https://www.instagram.com/ayti_xizmati',
   ],
 };
@@ -51,45 +116,90 @@ const organizationSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': websiteId,
   name: 'AyTi Xizmati',
   url: baseUrl,
   inLanguage: lang,
+  publisher: { '@id': orgId },
 };
 
-// Service JSON-LD
-const serviceSchema = {
+// WebPage JSON-LD (with speakable for voice assistants)
+const webpageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Web Development',
-  provider: {
-    '@type': 'Organization',
-    name: 'AyTi Xizmati',
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Uzbekistan',
-  },
-  offers: {
-    '@type': 'AggregateOffer',
-    lowPrice: '175',
-    highPrice: '1200',
-    priceCurrency: 'USD',
+  '@type': 'WebPage',
+  '@id': webpageId,
+  url: canonicalUrl,
+  name: title,
+  description,
+  inLanguage: lang,
+  isPartOf: { '@id': websiteId },
+  about: { '@id': orgId },
+  primaryImageOfPage: { '@type': 'ImageObject', url: ogImageUrl },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.hero-subtitle', '.section-title', '.service-description'],
   },
 };
+
+// Per-service Service+Offer schemas
+const servicesSchemas = serviceItems.map((item, idx) => {
+  const priceMatch = item.price.match(/(\d+)/);
+  const numericPrice = priceMatch ? priceMatch[1] : undefined;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${canonicalUrl}#service-${idx + 1}`,
+    name: item.title,
+    description: item.description,
+    serviceType: item.title,
+    provider: { '@id': orgId },
+    areaServed: { '@type': 'Country', name: 'Uzbekistan' },
+    ...(numericPrice && {
+      offers: {
+        '@type': 'Offer',
+        price: numericPrice,
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: numericPrice,
+          priceCurrency: 'USD',
+          valueAddedTaxIncluded: false,
+        },
+        availability: 'https://schema.org/InStock',
+      },
+    }),
+  };
+});
 
 // FAQ JSON-LD
-const faqSchema = faqItems.length > 0 ? {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqItems.map(item => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer,
-    },
-  })),
-} : null;
+const faqSchema =
+  faqItems.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${canonicalUrl}#faq`,
+        mainEntity: faqItems.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      }
+    : null;
+
+// BreadcrumbList JSON-LD
+const breadcrumbSchema =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((b, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: b.name,
+          item: b.url,
+        })),
+      }
+    : null;
 ---
 
 <!doctype html>
@@ -97,22 +207,30 @@ const faqSchema = faqItems.length > 0 ? {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
     <meta name="author" content="AyTi Xizmati" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
 
+    <!-- Theme & PWA -->
+    <meta name="theme-color" content="#18181B" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="AyTi Xizmati" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={`${baseUrl}/og-image.png`} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="AyTi Xizmati - Professional Web Development" />
+    <meta property="og:image:alt" content="AyTi Xizmati — sayt, bot, CRM, mobil ilovalar" />
     <meta property="og:locale" content={localeMap[lang]} />
     {Object.entries(localeMap).filter(([l]) => l !== lang).map(([, locale]) => (
       <meta property="og:locale:alternate" content={locale} />
@@ -122,48 +240,67 @@ const faqSchema = faqItems.length > 0 ? {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${baseUrl}/og-image.png`} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content="AyTi Xizmati — sayt, bot, CRM, mobil ilovalar" />
 
     <!-- Canonical & Alternates -->
     <link rel="canonical" href={canonicalUrl} />
-    {alternates.map(alt => (
+    {alternates.map((alt) => (
       <link rel="alternate" hreflang={alt.lang} href={alt.href} />
     ))}
     <link rel="alternate" hreflang="x-default" href={baseUrl} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- DNS Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
 
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webpageSchema)} />
+    {servicesSchemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     {faqSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     )}
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+
+    <slot name="head" />
 
     <!-- Analytics (deferred) -->
     <script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
+      window.addEventListener('load', function () {
+        setTimeout(function () {
           var gs = document.createElement('script');
-          gs.async = 1;
+          gs.async = true;
           gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y17JV81KRQ';
           document.head.appendChild(gs);
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
           window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', 'G-Y17JV81KRQ');
           gtag('config', 'AW-17868962219');
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "v6d1s7dygu");
+          (function (c, l, a, r, i, t, y) {
+            c[a] =
+              c[a] ||
+              function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', 'v6d1s7dygu');
         }, 2000);
       });
     </script>

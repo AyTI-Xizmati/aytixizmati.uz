@@ -98,27 +98,59 @@
     "items": [
       {
         "question": "Loyiha qancha muddatda tayyor bo'ladi?",
-        "answer": "Loyiha turi va hajmiga qarab 5 kundan 60 kungacha. Oddiy sayt yoki bot 5-10 kun, mobil ilova yoki CRM 30-60 kun atrofida tayyor bo'ladi."
+        "answer": "Loyiha turi va hajmiga qarab 5 kundan 60 kungacha. Oddiy landing yoki Telegram bot 5–10 kun, korporativ sayt 10–20 kun, CRM tizim 30–45 kun, mobil ilova 30–60 kun atrofida tayyor bo'ladi."
       },
       {
-        "question": "Narx nimaga bog'liq?",
-        "answer": "Narx xizmat turi, funksionallik hajmi va loyiha murakkabligiga qarab belgilanadi. Bepul maslahat orqali aniq narx olinadi."
+        "question": "Sayt yaratish narxi qancha?",
+        "answer": "Landing sahifa $175 dan, korporativ sayt $300 dan, onlayn-do'kon $500 dan boshlanadi. Aniq narx funksionallik, dizayn murakkabligi va sahifalar soniga qarab belgilanadi. Bepul maslahatda aniq taklif beriladi."
+      },
+      {
+        "question": "Telegram bot yasash narxi qancha?",
+        "answer": "Oddiy buyurtma qabul qiluvchi bot $100 dan, to'lov integratsiyasi va admin panelga ega bot $200–$400 atrofida. CRM yoki tashqi tizimlar bilan integratsiya talab qilinsa, narx kelishuv asosida belgilanadi."
+      },
+      {
+        "question": "Mobil ilova qaysi platformalar uchun yaratasiz?",
+        "answer": "Android va iOS uchun bitta kod bazasidan ishlovchi cross-platform ilovalar yaratamiz (React Native / Flutter). Bu pul va vaqtni tejaydi, lekin mahalliy tezlik va imkoniyatlar saqlanadi."
       },
       {
         "question": "Qanday xizmatlarni taklif qilasizlar?",
-        "answer": "Veb-sayt yaratish, mobil ilovalar, Telegram botlar, CRM tizimlar, texnik qo'llab-quvvatlash va maxsus dasturlash xizmatlarini taklif qilamiz."
+        "answer": "Veb-sayt yaratish (landing, korporativ, do'kon), mobil ilovalar (Android va iOS), Telegram botlar, CRM tizimlar, texnik qo'llab-quvvatlash va maxsus dasturlash. Mavjud sayt yoki tizimni qayta dizayn qilish ham mumkin."
+      },
+      {
+        "question": "Domain va hostingni o'zim sotib olishim kerakmi?",
+        "answer": "Yo'q. 1 yillik domain va 1 oylik hosting biz tomonimizdan taqdim etiladi. Keyin hosting'ni biz orqali davom ettirishingiz yoki o'zingizning provayderga ko'chirishingiz mumkin."
       },
       {
         "question": "Buyurtma berilgandan keyin jarayon qanday bo'ladi?",
-        "answer": "Avval bepul maslahat, keyin loyiha strukturasi va prototipi tayyorlanadi, siz bilan tasdiqlanadi, shundan so'ng ishlab chiqish boshlanadi."
+        "answer": "1) Bepul maslahat va talablarni o'rganish; 2) Loyiha strukturasi va dizayn prototipi tayyorlanadi; 3) Siz tasdiqlaganingizdan keyin ishlab chiqish boshlanadi; 4) Testlash va ishga tushirish; 5) Bepul texnik qo'llab-quvvatlash."
       },
       {
         "question": "Loyiha topshirilgandan keyin texnik yordam bo'ladimi?",
-        "answer": "Ha. Barcha loyihalarga 1 oydan 3 oygacha bepul texnik qo'llab-quvvatlash ko'rsatiladi."
+        "answer": "Ha. Barcha loyihalarga 1 oydan 3 oygacha bepul texnik qo'llab-quvvatlash beriladi: xatoliklarni tuzatish, kichik o'zgartirishlar va maslahatlar. Keyin oylik kelishuv asosida davom ettirish mumkin ($50/oy dan)."
       },
       {
         "question": "To'lov qanday amalga oshiriladi?",
-        "answer": "Loyiha boshida 50% oldindan to'lov, qolgan 50% loyiha topshirilgandan keyin to'lanadi."
+        "answer": "50% oldindan to'lov loyiha boshida, qolgan 50% loyiha topshirilgandan keyin. To'lov Click, Payme, naqd yoki bank o'tkazmasi orqali qabul qilinadi. Xorijiy mijozlar uchun USD orqali ham mumkin."
+      },
+      {
+        "question": "Sayt SEO-ga moslashganmi?",
+        "answer": "Ha. Har bir sayt SEO-ga moslab yaratiladi: tezlik (Core Web Vitals), to'g'ri meta-teglar, sitemap, robots.txt, structured data (schema.org), mobil-friendly va Google Search Console ulanishi. AI search engine'larga ham moslashtiriladi (AEO)."
+      },
+      {
+        "question": "Saytni mustaqil tahrirlash mumkinmi?",
+        "answer": "Ha. Har bir korporativ sayt va onlayn-do'kon uchun oddiy boshqaruv paneli (admin panel) beriladi — matn, rasm, mahsulot va narxlarni dasturchisiz o'zgartirishingiz mumkin. CMS sifatida Strapi, Sanity yoki maxsus yechim ishlatamiz."
+      },
+      {
+        "question": "Mavjud saytimni yangilash yoki tezlatish mumkinmi?",
+        "answer": "Ha. Mavjud saytni audit qilamiz: SEO holati, tezlik, dizayn, xavfsizlik. Keyin: faqat optimallashtirish, qayta dizayn yoki to'liq qayta yozish — qaysi biri tezroq va arzonroq bo'lsa, shuni taklif qilamiz."
+      },
+      {
+        "question": "Toshkent'dan tashqaridagi mijozlar bilan ishlaysizmi?",
+        "answer": "Ha. Butun O'zbekiston va xorijdagi mijozlar bilan masofadan ishlaymiz. Aloqa Telegram, Zoom, telefon va elektron pochta orqali olib boriladi. Hujjatlar va shartnomalar elektron tarzda imzolanadi."
+      },
+      {
+        "question": "Qaysi texnologiyalarda ishlaysizlar?",
+        "answer": "Frontend: React, Next.js, Astro, Vue. Backend: Node.js, Python (Django/FastAPI), PHP (Laravel). Mobil: React Native, Flutter. Ma'lumotlar bazasi: PostgreSQL, MongoDB, MySQL. Cloud: Vercel, Railway, AWS, DigitalOcean."
       }
     ]
   },

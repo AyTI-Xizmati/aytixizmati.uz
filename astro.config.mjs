@@ -1,10 +1,20 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://aytixizmati.uz',
-  integrations: [react(), sitemap()],
+  trailingSlash: 'ignore',
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'uz',
+        locales: { uz: 'uz-UZ', ru: 'ru-RU', en: 'en-US' },
+      },
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date(),
+    }),
+  ],
   i18n: {
     defaultLocale: 'uz',
     locales: ['uz', 'ru', 'en'],
