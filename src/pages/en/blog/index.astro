@@ -1,0 +1,46 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+import en from '../../../i18n/en.json';
+
+const posts = (await getCollection('blog', ({ data }) => data.lang === 'en'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout
+  lang="en"
+  title="Blog — AyTi Xizmati"
+  description="Pricing, packages and practical guides for websites, Telegram bots, CRM and ERP in Uzbekistan"
+  keywords="IT blog, website cost, telegram bot cost, crm cost, erp cost, software development uzbekistan"
+>
+  <Navbar lang="en" nav={en.nav} />
+
+  <section class="blog-page">
+    <div class="container">
+      <h1 class="blog-page-title">Blog</h1>
+      <p class="blog-page-subtitle">Pricing, packages and practical advice for businesses</p>
+
+      {posts.length === 0 ? (
+        <p class="blog-empty">No articles yet.</p>
+      ) : (
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date}
+              tags={post.data.tags}
+              href={`/en/blog/${post.slug}`}
+              readLabel="Read"
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <Footer footer={en.footer} />
+</Layout>

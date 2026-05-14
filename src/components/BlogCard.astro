@@ -4,20 +4,21 @@ interface Props {
   description: string;
   date: string;
   tags: string[];
-  slug: string;
+  href: string;
+  readLabel?: string;
 }
 
-const { title, description, date, tags, slug } = Astro.props;
+const { title, description, date, tags, href, readLabel = "O'qish" } = Astro.props;
 ---
 
-<a href={`/blog/${slug}`} class="blog-card">
+<a href={href} class="blog-card">
   <div class="blog-card-date">{date}</div>
   <h3 class="blog-card-title">{title}</h3>
   <p class="blog-card-desc">{description}</p>
   <div class="blog-card-tags">
-    {tags.map(tag => (
+    {tags.map((tag) => (
       <span class="blog-tag">{tag}</span>
     ))}
   </div>
-  <span class="blog-card-read">O'qish &rarr;</span>
+  <span class="blog-card-read">{readLabel} &rarr;</span>
 </a>

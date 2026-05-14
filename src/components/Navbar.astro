@@ -20,6 +20,7 @@ const languages = [
 ];
 
 const homeHref = lang === 'uz' ? '/' : `/${lang}`;
+const blogHref = lang === 'uz' ? '/blog' : `/${lang}/blog`;
 ---
 
 <nav class="navbar" id="navbar">
@@ -73,7 +74,7 @@ const homeHref = lang === 'uz' ? '/' : `/${lang}`;
       <li><a href="#jarayon">{nav.process}</a></li>
       <li><a href="#faq">{nav.faq}</a></li>
       <li><a href="#aloqa">{nav.contact}</a></li>
-      <li><a href="/blog">{nav.blog}</a></li>
+      <li><a href={blogHref}>{nav.blog}</a></li>
     </ul>
   </div>
 </nav>

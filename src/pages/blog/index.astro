@@ -6,34 +6,35 @@ import BlogCard from '../../components/BlogCard.astro';
 import { getCollection } from 'astro:content';
 import uz from '../../i18n/uz.json';
 
-const posts = (await getCollection('blog'))
+const posts = (await getCollection('blog', ({ data }) => data.lang === 'uz'))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <Layout
   lang="uz"
   title="Blog — AyTi Xizmati"
-  description="IT sohasidagi foydali maqolalar, maslahatlar va yangiliklar"
-  keywords="IT blog, sayt yaratish maslahatlar, telegram bot, dasturlash, SEO"
+  description="IT sohasidagi foydali maqolalar, narxlar, qo'llanmalar va sotuv ssenariolar"
+  keywords="IT blog, sayt yaratish narxi, telegram bot narxi, crm narxi, erp narxi, dasturlash maslahatlar"
 >
   <Navbar lang="uz" nav={uz.nav} />
 
   <section class="blog-page">
     <div class="container">
       <h1 class="blog-page-title">Blog</h1>
-      <p class="blog-page-subtitle">IT sohasidagi foydali maqolalar va maslahatlar</p>
+      <p class="blog-page-subtitle">Narxlar, paketlar va biznes uchun amaliy maslahatlar</p>
 
       {posts.length === 0 ? (
-        <p class="blog-empty">Hozircha maqolalar yo'q. Tez orada yangi maqolalar qo'shiladi.</p>
+        <p class="blog-empty">Hozircha maqolalar yo'q.</p>
       ) : (
         <div class="blog-grid">
-          {posts.map(post => (
+          {posts.map((post) => (
             <BlogCard
               title={post.data.title}
               description={post.data.description}
               date={post.data.date}
               tags={post.data.tags}
-              slug={post.slug}
+              href={`/blog/${post.slug}`}
+              readLabel="O'qish"
             />
           ))}
         </div>
