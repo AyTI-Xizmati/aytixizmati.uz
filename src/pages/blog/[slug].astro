@@ -60,6 +60,7 @@ const isPlaceholder = post.slug === 'placeholder';
   keywords={post.data.tags.join(', ')}
   ogType="article"
   breadcrumbs={breadcrumbs}
+  faqItems={post.data.faqItems}
   noindex={isPlaceholder}
 >
   <Fragment slot="head">
