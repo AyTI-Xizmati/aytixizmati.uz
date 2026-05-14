@@ -56,45 +56,27 @@ const orgId = `${baseUrl}/#org`;
 const websiteId = `${baseUrl}/#website`;
 const webpageId = `${canonicalUrl}#webpage`;
 
-// LocalBusiness JSON-LD (richer than Organization for a Tashkent-based business)
+// LocalBusiness JSON-LD (only verified fields)
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'ProfessionalService'],
   '@id': orgId,
   name: 'AyTi Xizmati',
-  alternateName: ['AyTi Xizmati IT', 'AytiXizmati'],
   url: baseUrl,
   logo: `${baseUrl}/favicon.svg`,
   image: `${baseUrl}/og-image.png`,
   description:
     'Veb-sayt, mobil ilova, Telegram bot, CRM tizimlar va maxsus dasturlash xizmatlari. Toshkent.',
-  priceRange: '$50–$1200',
   telephone: '+998773009928',
-  email: 'info@aytixizmati.uz',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Olmazor tumani',
     addressLocality: 'Toshkent',
-    addressRegion: 'Toshkent',
-    postalCode: '100000',
+    addressRegion: 'Olmazor',
     addressCountry: 'UZ',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 41.3275,
-    longitude: 69.2817,
   },
   areaServed: [
     { '@type': 'Country', name: 'Uzbekistan' },
     { '@type': 'City', name: 'Tashkent' },
-  ],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '09:00',
-      closes: '20:00',
-    },
   ],
   contactPoint: [
     {

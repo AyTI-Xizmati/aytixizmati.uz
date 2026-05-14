@@ -91,15 +91,6 @@ Bu 5 ta belgi bo'lsa — vaqt keldi:
 
 Ha, agar sotuvchilaringiz ko'chada ishlasa (real estate, kuryer, savdo agentlari). Aks holda — veb-versiya kifoya.
 
-## ROI: CRM o'zini qachon oqlaydi?
-
-Tajriba shuni ko'rsatadiki, CRM **3–6 oyda o'zini oqlaydi**, agar:
-- Eski mijozlar bilan ishlash 30% ga oshsa
-- Xodim vaqti hisobotga 50% kam ketsa
-- Bitta mijoz bilan bog'lanish o'rtacha 5 daqiqa tezlasa
-
-100 ta mijozli biznes uchun 1 yilda taxminan $2000–$5000 qo'shimcha foyda olib keladi.
-
 ## Xulosa
 
 CRM — bu **xodimning yodi emas, biznesning yodi**. Ish jarayonini tartiblaydi, mijozlarni yo'qotmaydi, va o'sish uchun asos yaratadi.

@@ -25,6 +25,8 @@ faqItems:
 
 ERP implementation in Uzbekistan in 2026 costs **between $800 and $50,000**. Exact price depends on company size, module count and integrations (1C, banks, warehouses). Below — 4 ready packages.
 
+> ⚠️ **Important:** The packages and prices below are indicative market ranges. Exact pricing, timeline, and package contents are determined individually after we review your needs. [Free consultation →](/en/#aloqa)
+
 ## TL;DR — at a glance
 
 - **Basic ERP** (warehouse + sales): $800, 4–6 weeks
@@ -144,40 +146,6 @@ Modules (Pro + extra):
 3. **Abrupt cutover** — need 1–2 months of parallel operation.
 4. **IT-only decision** — every department must participate.
 5. **Not calculating ROI** — calculate savings BEFORE implementation.
-
-## 3 real scenarios
-
-### Construction "Stroy-Tech" — $4500 package
-- Project management + warehouse + procurement
-- Implemented in 4 months
-- Material losses: 12% → 1%
-- Project timeline reduced by 18%
-
-### Restaurant chain "Lazzat" (4 branches) — $3200 package
-- Warehouse + sales + procurement + accounting
-- Full migration from 1C
-- Auto-reports from each branch
-- Food losses: 8% → 2%
-
-### Wholesale "MegaTorg" — $6800 package
-- 3 warehouses + production + banks
-- Mobile app for warehouse staff
-- Order intake: 2 hours → 15 minutes
-- Saved 2 staff/year
-
-## ROI — when does ERP pay back?
-
-For a 100-staff company:
-
-| Saving | Per year (USD) |
-|---|---|
-| Cancel 1C licenses | $3000 |
-| Time savings (1 hr/day × 100 staff) | $24000 |
-| Reduced losses (warehouse) | $5000 |
-| Faster reports | $2000 |
-| **Total annual saving** | **$34000** |
-
-$5000 ERP → **pays back in 2 months**.
 
 ---
 

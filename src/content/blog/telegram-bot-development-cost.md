@@ -23,6 +23,8 @@ faqItems:
 
 Telegram bot development in 2026 costs **between $100 and $1500**. The exact price depends on bot type, integrations (payment, CRM, inventory) and admin panel complexity. Below — 4 ready-made packages and concrete sales terms.
 
+> ⚠️ **Important:** The packages and prices below are indicative market ranges. Exact pricing, timeline, and package contents are determined individually after we review your needs. [Free consultation →](/en/#aloqa)
+
 ## TL;DR — at a glance
 
 - **Simple bot** (FAQ, menu): $100, 5 days
@@ -111,25 +113,6 @@ Included (Pro + extra):
 ✅ **Management guide** — video and PDF for you and your staff
 ✅ **Phone support** — during business hours
 ✅ Ongoing support — from $50/mo
-
-## 3 real scenarios
-
-### Restaurant "Lazzat" — $250 package
-- Menu (45 items), cart
-- Delivery address collection
-- 1200+ orders via bot in 4 months
-- ROI: 1 month
-
-### Online store "Modnik" — $480 package
-- Click integration
-- Admin panel
-- Sales via Telegram bot increased by 35% in 3 months
-
-### Education center "BilimUy" — $200 package
-- Course enrollment
-- Lesson reminders
-- Homework submission
-- Time saved: 40 hours/month
 
 ## Frequently asked questions
 

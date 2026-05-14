@@ -25,6 +25,8 @@ faqItems:
 
 CRM yaratish Toshkentda 2026-yilda **$300 dan $5000 gacha**. Aniq narx — xodimlar soni, integratsiyalar (Telegram, 1C, Click), avtomatlashtirish darajasiga bog'liq. Quyida 4 ta tayyor paketni va aniq sotuv shartlarini ko'rib chiqamiz.
 
+> ⚠️ **Muhim:** Quyidagi paketlar va narxlar — bozor uchun taxminiy yo'nalish. Aniq narx, muddat va paket tarkibi sizning ehtiyojlaringizni o'rganganimizdan keyin individual belgilanadi. [Bepul maslahat oling →](/#aloqa)
+
 ## TL;DR — bir qarashda
 
 - **Boshlang'ich CRM** (1–3 xodim, mijoz bazasi): $300, 15 kun
@@ -171,26 +173,6 @@ Sizda allaqachon Bitrix24 yoki AmoCRM bo'lsa va biroz qiyinchilik bo'lsa:
 - ROI musbat (CRM o'zini oqlay boshlaydi)
 - Hisobotlar asosida qaror qabul qilinadi
 - Yangi modullar qo'shilishi mumkin
-
-## 3 ta haqiqiy ssenariy
-
-### Real estate agentligi "Boshvit" — $850 paket
-- 6 ta agent uchun CRM
-- Telegram bot orqali mijoz savollarini qabul qilish
-- Avval Excel + WhatsApp guruhda ishlardi
-- 3 oyda sotuv 27% oshdi
-
-### Avtosalon "Premium Auto" — $1400 paket
-- 1C bilan integratsiya
-- Test-drive uchun onlayn yozilish
-- Avtomatik kvitansiya yuborish
-- Yangi mijoz qabul qilish vaqti 4 soatdan 30 daqiqaga tushdi
-
-### Ta'lim markazi "BilimUy" — $400 paket
-- 200+ talaba bazasi
-- Dars eslatmalari, uy vazifasi yuborish
-- To'lov tarixi
-- Ota-onalarga avtomatik hisobot
 
 ## Tez-tez so'raladigan savollar
 

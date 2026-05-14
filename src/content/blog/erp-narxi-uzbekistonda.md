@@ -25,6 +25,8 @@ faqItems:
 
 ERP tizim joriy qilish narxi O'zbekistonda 2026-yilda **$800 dan $50000 gacha**. Aniq narx — kompaniya hajmi, modullar soni va integratsiyalar (1C, banklar, omborlar) ga bog'liq. Quyida 4 ta tayyor paketni va aniq sotuv shartlarini ko'rib chiqamiz.
 
+> ⚠️ **Muhim:** Quyidagi paketlar va narxlar — bozor uchun taxminiy yo'nalish. Aniq narx, muddat va paket tarkibi sizning ehtiyojlaringizni o'rganganimizdan keyin individual belgilanadi. [Bepul maslahat oling →](/#aloqa)
+
 ## TL;DR — bir qarashda
 
 - **Boshlang'ich ERP** (ombor + sotuv): $800, 4–6 hafta
@@ -168,40 +170,6 @@ Modullar (Pro + qo'shimcha):
 3. **Eski tizimni keskin tashlash** — 1–2 oy parallel ishlatish kerak.
 4. **Faqat IT bo'limi qarori** — har bo'lim rahbari ishtirok etishi shart.
 5. **ROI hisoblamaslik** — joriy qilishdan oldin "qancha tejaymiz?" deb hisoblang.
-
-## 3 ta haqiqiy ssenariy
-
-### Qurilish kompaniyasi "Stroy-Tech" — $4500 paket
-- Loyiha boshqaruvi + ombor + xarid
-- 4 oyda joriy qilindi
-- Materiallar yo'qolishi 12% dan 1% ga tushdi
-- Loyiha tugatish vaqti 18% qisqardi
-
-### Restoran tarmog'i "Lazzat" (4 filial) — $3200 paket
-- Sklad + sotuv + xarid + hisob-kitob
-- 1C dan to'liq ko'chish
-- Har filialdan kunlik hisobot avtomatik
-- Yo'qotishlar (oziq-ovqat) 8% dan 2% ga tushdi
-
-### Optom savdo "MegaTorg" — $6800 paket
-- 3 ta ombor + ishlab chiqarish + bank integratsiyasi
-- Mobil ilova ombor xodimlari uchun
-- Buyurtma qabul qilish vaqti 2 soatdan 15 daqiqaga
-- Yiliga 2 ta xodim tejash (avtomatlashtirish)
-
-## ROI hisob-kitobi — ERP o'zini qachon oqlaydi?
-
-100 ta xodimli kompaniya uchun:
-
-| Tejov | Yiliga (USD) |
-|---|---|
-| 1C litsenziya bekor qilish | $3000 |
-| Xodim vaqti tejash (kuniga 1 soat × 100 xodim) | $24000 |
-| Yo'qotishlar kamayishi (ombor) | $5000 |
-| Hisobotlar tezroq tayyor | $2000 |
-| **Jami yillik tejov** | **$34000** |
-
-ERP narxi $5000 → **2 oyda o'zini oqlaydi**.
 
 ## Tez-tez so'raladigan savollar
 

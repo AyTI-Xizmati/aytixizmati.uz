@@ -25,6 +25,8 @@ faqItems:
 
 Sayt yaratish Toshkentda 2026-yilda **$175 dan $5000 gacha**. Aniq narx — sayt turi, sahifalar soni, dizayn murakkabligi va kerakli funksiyalarga bog'liq. Quyida 4 ta tayyor paketni va aniq sotuv shartlarini ko'rib chiqamiz.
 
+> ⚠️ **Muhim:** Quyidagi paketlar va narxlar — bozor uchun taxminiy yo'nalish. Aniq narx, muddat va paket tarkibi sizning ehtiyojlaringizni o'rganganimizdan keyin individual belgilanadi. [Bepul maslahat oling →](/#aloqa)
+
 ## TL;DR — bir qarashda
 
 - **Landing page** (1 sahifa, sotuv uchun): $175, 5–7 kun
@@ -135,22 +137,6 @@ Ichida (Pro + qo'shimcha):
 ✅ **Google Search Console** sozlangan
 ✅ **Analytics** (GA4 + Yandex Metrica)
 ✅ Davomli yordam — $50/oy dan
-
-## 3 ta haqiqiy ssenariy
-
-### "Aleynur" qishloq xo'jaligi do'koni — $480 paket
-- Onlayn-do'kon, Payme integratsiyasi
-- 4 oyda Telegram va Instagram'dan 800+ buyurtma
-- ROI: 2 oyda
-
-### "Med Klinik" tibbiy markaz — $350 paket
-- Korporativ sayt + booking
-- Onlayn yozilish (kun va vrach tanlash)
-- Avval qog'ozda yozardi, hozir 100% onlayn
-
-### "Smart English" til kursi — $220 landing
-- Yagona sahifa, sotuv uchun
-- Reklamadan kelgan trafik bo'yicha 12% konversiya
 
 ## Tez-tez so'raladigan savollar
 

@@ -25,6 +25,8 @@ faqItems:
 
 Custom CRM development in Tashkent in 2026 costs **between $300 and $5000**. Exact price depends on staff count, integrations (Telegram, 1C, Click) and automation level. Below — 4 ready packages.
 
+> ⚠️ **Important:** The packages and prices below are indicative market ranges. Exact pricing, timeline, and package contents are determined individually after we review your needs. [Free consultation →](/en/#aloqa)
+
 ## TL;DR — at a glance
 
 - **Basic CRM** (1–3 staff, customer base): $300, 15 days
@@ -140,23 +142,6 @@ Included (Pro + extra):
 **30 days:** all customers in DB, all new sales through CRM
 **60 days:** reactivate old customers, sales +15-20%
 **90 days:** ROI positive, decisions based on reports
-
-## 3 real scenarios
-
-### Real estate agency "Boshvit" — $850 package
-- 6 agents in CRM
-- Telegram bot for inquiries
-- Sales +27% in 3 months
-
-### Auto dealership "Premium Auto" — $1400 package
-- 1C integration
-- Online test-drive booking
-- Customer reception time: 4 hours → 30 minutes
-
-### Education center "BilimUy" — $400 package
-- 200+ students in database
-- Lesson reminders, homework delivery
-- Auto-reports to parents
 
 ---
 

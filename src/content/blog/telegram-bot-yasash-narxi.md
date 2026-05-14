@@ -23,6 +23,8 @@ faqItems:
 
 Telegram bot yasash narxi 2026-yilda **$100 dan $1500 gacha**. Aniq raqam — bot turi, integratsiyalar (to'lov, CRM, ombor) va admin panel murakkabligiga bog'liq. Quyida 4 ta tayyor paketni va aniq sotuv shartlarini ko'rib chiqamiz.
 
+> ⚠️ **Muhim:** Quyidagi paketlar va narxlar — bozor uchun taxminiy yo'nalish. Aniq narx, muddat va paket tarkibi sizning ehtiyojlaringizni o'rganganimizdan keyin individual belgilanadi. [Bepul maslahat oling →](/#aloqa)
+
 ## TL;DR — bir qarashda
 
 - **Eng arzon bot** (FAQ, menyu): $100, 5 kunda
@@ -111,25 +113,6 @@ Ichida (Pro + qo'shimcha):
 ✅ **Boshqaruv qo'llanmasi** — siz va xodimlar uchun video va PDF
 ✅ **Telefon orqali yordam** — ish vaqtida
 ✅ Davomiy qo'llab-quvvatlash — $50/oy dan
-
-## 3 ta haqiqiy ssenariy
-
-### Restoran "Lazzat" — $250 paket
-- Menyu (45 ta taom), savatcha
-- Yetkazib berish manzili olish
-- 4 oyda 1200+ buyurtma bot orqali
-- ROI: 1 oyda
-
-### Onlayn-do'kon "Modnik" — $480 paket
-- Click integratsiyasi
-- Admin panel
-- Telegram bot orqali sotuv 35% ga oshdi (3 oyda)
-
-### Ta'lim markazi "BilimUy" — $200 paket
-- Kursga yozilish
-- Dars eslatmalari
-- Uy vazifasini yuborish
-- Vaqt tejovi: oyiga 40 soat
 
 ## Tez-tez so'raladigan savollar
 

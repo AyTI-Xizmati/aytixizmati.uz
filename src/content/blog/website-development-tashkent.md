@@ -25,6 +25,8 @@ faqItems:
 
 Website development in Tashkent in 2026 costs **between $175 and $5000**. The exact price depends on site type, number of pages, design complexity and required features. Below — 4 ready-made packages and full sales conditions.
 
+> ⚠️ **Important:** The packages and prices below are indicative market ranges. Exact pricing, timeline, and package contents are determined individually after we review your needs. [Free consultation →](/en/#aloqa)
+
 ## TL;DR — at a glance
 
 - **Landing page** (1 page for sales): $175, 5–7 days
@@ -135,22 +137,6 @@ Included (Pro + extra):
 ✅ **Google Search Console** set up
 ✅ **Analytics** (GA4 + Yandex Metrica)
 ✅ Ongoing support — from $50/mo
-
-## 3 real scenarios
-
-### "Aleynur" agricultural store — $480 package
-- Online store, Payme integration
-- 800+ orders from Telegram and Instagram in 4 months
-- ROI: 2 months
-
-### "Med Klinik" medical center — $350 package
-- Corporate site + booking
-- Online appointments (day & doctor selection)
-- Was paper-based, now 100% online
-
-### "Smart English" language course — $220 landing
-- Single sales page
-- 12% conversion from ad traffic
 
 ## Frequently asked questions
 
