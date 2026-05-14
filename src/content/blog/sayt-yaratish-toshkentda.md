@@ -82,9 +82,7 @@ Ichida (Pro + qo'shimcha):
 - Server arxitektura va deploy
 - Davomli qo'llab-quvvatlash
 
-> 💬 **Bepul maslahat olish uchun:**
-> [Telegram'da yozish](https://t.me/AyTi_Xizmati) yoki **+998 77-300-99-28**
-
+> 💬 **Bepul maslahat:** [Sayt orqali ariza qoldiring →](/#aloqa) — yoki Telegram'da yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## Narxni nima oshiradi?
 
 | Element | Qo'shimcha narx |
@@ -154,14 +152,12 @@ Sayt to'g'ri yaratilsa, oddiy SEO ishlari avtomatik. Faol promotsiya uchun alohi
 
 ---
 
-## 📞 Bugundanoq boshlang
+## 📨 Buyurtma va bepul maslahat
 
-**Eng tezkor yo'l — Telegram orqali yozing:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
+**Asosiy yo'l — sayt orqali ariza qoldiring:**
+👉 [Bepul maslahat formasi →](/#aloqa)
 
-Yoki qo'ng'iroq qiling: **+998 77-300-99-28**
-
-[Bepul maslahatga yozilish (forma) →](/#aloqa) — odatda 30 daqiqa ichida javob beramiz.
+Forma yuborilganidan keyin biz Telegram orqali siz bilan bog'lanamiz. Yoki to'g'ridan-to'g'ri yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

@@ -82,9 +82,7 @@ Included (Pro + extra):
 - Server architecture and deployment
 - Ongoing support
 
-> 💬 **Free consultation:**
-> [Message on Telegram](https://t.me/AyTi_Xizmati) or **+998 77-300-99-28**
-
+> 💬 **Free consultation:** [Submit a request on the site →](/en/#aloqa) — or message Telegram: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## What increases the price?
 
 | Element | Add-on cost |
@@ -154,14 +152,12 @@ If the site is built right — basic SEO is automatic. Active promotion needs a 
 
 ---
 
-## 📞 Start today
+## 📨 Order and free consultation
 
-**Fastest way — Telegram:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
+**Primary channel — submit a request on the site:**
+👉 [Free consultation form →](/en/#aloqa)
 
-Or call: **+998 77-300-99-28**
-
-[Free consultation request →](/en/#aloqa) — usually we reply within 30 minutes.
+After form submission we'll reach out via Telegram. Or message us directly: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

@@ -7,11 +7,15 @@ AyTi Xizmati — O'zbekistondagi kichik va o'rta biznes uchun raqamli yechimlar 
 ## Asosiy ma'lumotlar
 
 - Joylashuv: Toshkent, Olmazor tumani, O'zbekiston
-- Telefon: +998 77-300-99-28
+- Aloqa: sayt orqali ariza qoldirish — https://aytixizmati.uz/#aloqa
 - Telegram: https://t.me/AyTi_Xizmati
 - Telegram bot: https://t.me/AyTi_xizmatibot
 - Instagram: https://www.instagram.com/ayti_xizmati
 - Tillar: o'zbek, rus, ingliz
+
+## Buyurtma berish
+
+Hozirgi paytda buyurtma va maslahat uchun **faqat sayt orqali ariza qoldiriladi**: https://aytixizmati.uz/#aloqa — forma yuborilishi bilan biz Telegram orqali siz bilan bog'lanamiz. Yoki to'g'ridan-to'g'ri Telegram orqali yozish mumkin: @AyTi_Xizmati
 
 ## Xizmatlar va narxlar
 

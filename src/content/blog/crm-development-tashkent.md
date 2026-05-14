@@ -83,9 +83,7 @@ Included (Pro + extra):
 - White-label design
 - 6 months support
 
-> 💬 **Free CRM audit:**
-> [Message on Telegram](https://t.me/AyTi_Xizmati) or **+998 77-300-99-28**
-
+> 💬 **Free audit:** [Submit a request →](/en/#aloqa) — or Telegram: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## Bitrix24 / AmoCRM migration — from $200
 
 **Signs it's time to migrate:**
@@ -145,12 +143,12 @@ Included (Pro + extra):
 
 ---
 
-## 📞 Start today
+## 📨 Order and free audit
 
-**Telegram:** [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
-**Phone:** **+998 77-300-99-28**
+**Primary channel — submit a request on the site:**
+👉 [Free CRM audit form →](/en/#aloqa) — 30 min analysis and concrete proposal.
 
-[Free CRM audit →](/en/#aloqa) — 30 min analysis and concrete proposal.
+After form submission we'll reach out via Telegram. Or message us directly: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

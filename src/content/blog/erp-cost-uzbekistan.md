@@ -84,9 +84,7 @@ Modules (Pro + extra):
 - 24/7 support
 - 6 months support
 
-> 💬 **Free ERP audit:**
-> [Message on Telegram](https://t.me/AyTi_Xizmati) or **+998 77-300-99-28**
-
+> 💬 **Free audit:** [Submit a request →](/en/#aloqa) — or Telegram: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## 1C to custom ERP migration — from $500
 
 **Signs it's time:**
@@ -149,12 +147,12 @@ Modules (Pro + extra):
 
 ---
 
-## 📞 Start today
+## 📨 Order and free audit
 
-**Telegram:** [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
-**Phone:** **+998 77-300-99-28**
+**Primary channel — submit a request on the site:**
+👉 [Free ERP audit form →](/en/#aloqa) — 1 hour analysis with concrete ROI calculation.
 
-[Free ERP audit →](/en/#aloqa) — 1 hour analysis with concrete ROI calculation.
+After form submission we'll reach out via Telegram. Or message us directly: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

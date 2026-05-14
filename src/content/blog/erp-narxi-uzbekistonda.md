@@ -85,7 +85,7 @@ Modullar (Pro + qo'shimcha):
 - 6 oy bepul qo'llab-quvvatlash
 
 > 💬 **Bepul ERP auditi olish uchun:**
-> [Telegram'da yozish](https://t.me/AyTi_Xizmati) yoki **+998 77-300-99-28**
+> [Telegram'da yozish](https://t.me/AyTi_Xizmati)
 
 ## 1C dan maxsus ERP ga ko'chish — $500 dan
 
@@ -190,14 +190,12 @@ Ha. Soliq Qo'mitasi formatlarida (E-deklaratsiya) avtomatik hisobot tayyorlanadi
 
 ---
 
-## 📞 Bugundanoq boshlang
+## 📨 Buyurtma va bepul audit
 
-**Eng tezkor yo'l — Telegram orqali yozing:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
+**Asosiy yo'l — sayt orqali ariza qoldiring:**
+👉 [Bepul ERP audit formasi →](/#aloqa) — biz sizning hozirgi tizimingizni 1 soatda tahlil qilamiz va aniq ROI hisob-kitobini beramiz.
 
-Yoki qo'ng'iroq qiling: **+998 77-300-99-28**
-
-[Bepul ERP auditga yozilish (forma) →](/#aloqa) — biz sizning hozirgi tizimingizni 1 soatda tahlil qilamiz va aniq ROI hisob-kitobini beramiz.
+Forma yuborilganidan keyin biz Telegram orqali siz bilan bog'lanamiz. Yoki to'g'ridan-to'g'ri yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

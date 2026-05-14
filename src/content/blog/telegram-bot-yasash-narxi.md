@@ -75,9 +75,7 @@ Ichida (Pro + qo'shimcha):
 - Ko'p tilli (uz/ru/en)
 - Yetkazib berish hisob-kitobi (zona/masofa)
 
-> 💬 **Bepul maslahat olish uchun:**
-> [Telegram'da yozish](https://t.me/AyTi_Xizmati) yoki **+998 77-300-99-28**
-
+> 💬 **Bepul maslahat:** [Sayt orqali ariza qoldiring →](/#aloqa) — yoki Telegram'da yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## Narxni nima oshiradi?
 
 | Element | Qo'shimcha narx |
@@ -130,16 +128,14 @@ Ha, har bir paketga vaqtinchalik aksiya kodlari, "1+1" tipidagi takliflar, va so
 
 ---
 
-## 📞 Bugundanoq boshlang
+## 📨 Buyurtma va bepul maslahat
 
-**Eng tezkor yo'l — Telegram orqali yozing:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
-
-Yoki qo'ng'iroq qiling: **+998 77-300-99-28**
+**Asosiy yo'l — sayt orqali ariza qoldiring:**
+👉 [Bepul maslahat formasi →](/#aloqa)
 
 **Bepul demo bot ko'rmoqchimisiz?** [@AyTi_xizmatibot](https://t.me/AyTi_xizmatibot) — bizning haqiqiy demomiz.
 
-[Bepul maslahatga yozilish (forma) →](/#aloqa)
+Forma yuborilganidan keyin biz Telegram orqali siz bilan bog'lanamiz. Yoki to'g'ridan-to'g'ri yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

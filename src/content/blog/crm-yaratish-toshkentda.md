@@ -85,7 +85,7 @@ Ichida (Pro + qo'shimcha):
 - 6 oy bepul qo'llab-quvvatlash
 
 > 💬 **Bepul CRM auditi olish uchun:**
-> [Telegram'da yozish](https://t.me/AyTi_Xizmati) yoki **+998 77-300-99-28**
+> [Telegram'da yozish](https://t.me/AyTi_Xizmati)
 
 ## Bitrix24 / AmoCRM dan ko'chish — $200 dan
 
@@ -190,14 +190,12 @@ Ha. Veb-versiya barcha mobil brauzerda ishlaydi. Pro paketda alohida iOS/Android
 
 ---
 
-## 📞 Bugundanoq boshlang
+## 📨 Buyurtma va bepul audit
 
-**Eng tezkor yo'l — Telegram orqali yozing:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
+**Asosiy yo'l — sayt orqali ariza qoldiring:**
+👉 [Bepul CRM audit formasi →](/#aloqa) — biz sizning hozirgi jarayonni 30 daqiqada tahlil qilamiz va aniq taklif beramiz.
 
-Yoki qo'ng'iroq qiling: **+998 77-300-99-28**
-
-[Bepul CRM auditga yozilish (forma) →](/#aloqa) — biz sizning hozirgi jarayonni 30 daqiqada tahlil qilamiz va aniq taklif beramiz.
+Forma yuborilganidan keyin biz Telegram orqali siz bilan bog'lanamiz. Yoki to'g'ridan-to'g'ri yozing: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 

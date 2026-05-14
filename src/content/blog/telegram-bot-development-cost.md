@@ -75,9 +75,7 @@ Included (Pro + extra):
 - Multi-language (uz/ru/en)
 - Delivery cost calculation (zone/distance)
 
-> 💬 **Free consultation:**
-> [Message on Telegram](https://t.me/AyTi_Xizmati) or **+998 77-300-99-28**
-
+> 💬 **Free consultation:** [Submit a request on the site →](/en/#aloqa) — or message Telegram: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 ## What increases the price?
 
 | Element | Add-on cost |
@@ -130,16 +128,14 @@ Yes. Promo codes, "1+1" deals, and loyalty programs can be added to any package.
 
 ---
 
-## 📞 Get started today
+## 📨 Order and free consultation
 
-**Fastest way — Telegram:**
-👉 [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
-
-Or call: **+998 77-300-99-28**
+**Primary channel — submit a request on the site:**
+👉 [Free consultation form →](/en/#aloqa)
 
 **Want to see a demo bot?** [@AyTi_xizmatibot](https://t.me/AyTi_xizmatibot) — our real demo.
 
-[Free consultation request →](/en/#aloqa)
+After form submission we'll reach out via Telegram. Or message us directly: [@AyTi_Xizmati](https://t.me/AyTi_Xizmati)
 
 ---
 
